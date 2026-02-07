@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    line-height: 1.6;
+    font-feature-settings: 'cv01', 'cv02';
+  }
+}
+
+@layer components {
+  /* Platform table styles */
+  .platform-table {
+    @apply w-full border-collapse text-sm;
+  }
+
+  .platform-table th,
+  .platform-table td {
+    @apply border border-gray-200 dark:border-gray-700 px-3 py-3 text-center;
+  }
+
+  .platform-table th {
+    @apply bg-gray-50 dark:bg-gray-800 font-semibold;
+  }
+
+  /* Category row colors */
+  .category-linux {
+    @apply bg-amber-50 dark:bg-amber-900/20;
+  }
+
+  .category-macos {
+    @apply bg-cyan-50 dark:bg-cyan-900/20;
+  }
+
+  .category-windows {
+    @apply bg-emerald-50 dark:bg-emerald-900/20;
+  }
+
+  .category-components {
+    @apply bg-gray-50 dark:bg-gray-800/50;
+  }
+
+  /* Comparison highlighting - target td cells, excluding category cells with rowspan */
+  .diff-changed td:not([rowspan]) {
+    @apply bg-yellow-100 dark:bg-yellow-900/30 font-medium;
+  }
+
+  .diff-added td:not([rowspan]) {
+    @apply bg-green-100 dark:bg-green-900/30;
+  }
+
+  .diff-removed td:not([rowspan]) {
+    @apply bg-red-100 dark:bg-red-900/30;
+  }
+
+  .diff-unchanged td:not([rowspan]) {
+    /* No special styling - inherits default */
+  }
+
+  /* Year cards for history page */
+  .year-card {
+    @apply border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden;
+  }
+
+  .year-card-header {
+    @apply bg-gray-100 dark:bg-gray-800 px-4 py-3 flex justify-between items-center;
+  }
+
+  .year-card-content {
+    @apply p-4 space-y-4;
+  }
+
+  .year-card-section {
+    @apply rounded-lg p-3;
+  }
+
+  .year-card-table {
+    @apply w-full text-sm;
+  }
+
+  .year-card-table td {
+    @apply py-2 px-2;
+  }
+
+  .year-card-table td:first-child {
+    @apply text-left;
+  }
+
+  .year-card-table td:last-child {
+    @apply text-right whitespace-nowrap;
+  }
+
+  /* Note cards */
+  .note-card {
+    @apply border border-gray-200 dark:border-gray-700 rounded-lg p-5 mb-6;
+  }
+
+  .note-card-title {
+    @apply font-semibold text-gray-900 dark:text-gray-100 mb-2;
+  }
+
+  /* Note popover (desktop) */
+  .note-popover {
+    @apply absolute z-50 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl p-5 max-w-[400px] max-h-[60vh] overflow-y-auto;
+    animation: note-fade-in 0.15s ease-out;
+  }
+
+  .note-popover-arrow {
+    @apply absolute w-0 h-0;
+  }
+
+  .note-popover-arrow.arrow-top {
+    top: -6px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid theme('colors.gray.200');
+    filter: drop-shadow(0 -1px 0 theme('colors.gray.200'));
+  }
+
+  :is(.dark) .note-popover-arrow.arrow-top {
+    border-bottom-color: theme('colors.gray.700');
+    filter: drop-shadow(0 -1px 0 theme('colors.gray.700'));
+  }
+
+  .note-popover-arrow.arrow-bottom {
+    bottom: -6px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid theme('colors.gray.200');
+    filter: drop-shadow(0 1px 0 theme('colors.gray.200'));
+  }
+
+  :is(.dark) .note-popover-arrow.arrow-bottom {
+    border-top-color: theme('colors.gray.700');
+    filter: drop-shadow(0 1px 0 theme('colors.gray.700'));
+  }
+
+  /* Note backdrop (mobile) */
+  .note-backdrop {
+    @apply fixed inset-0 z-40 bg-black/0 transition-colors duration-200;
+  }
+
+  .note-backdrop.active {
+    @apply bg-black/50;
+  }
+
+  /* Note bottom sheet (mobile) */
+  .note-bottom-sheet {
+    @apply fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 rounded-t-2xl shadow-2xl p-5 pt-8 max-h-[70vh] overflow-y-auto;
+    transform: translateY(100%);
+    transition: transform 0.25s ease-out;
+  }
+
+  .note-bottom-sheet.active {
+    transform: translateY(0);
+  }
+
+  /* Close button for popover/sheet */
+  .note-close-btn {
+    @apply absolute top-2 right-3 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-xl leading-none cursor-pointer bg-transparent border-none p-1;
+  }
+
+  @keyframes note-fade-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Accordion styles */
+  .accordion-item {
+    @apply border border-gray-200 dark:border-gray-700 rounded-lg mb-2;
+  }
+
+  .accordion-header {
+    @apply w-full px-4 py-3 text-left font-medium flex justify-between items-center cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors;
+  }
+
+  .accordion-content {
+    @apply px-4 pb-4 prose dark:prose-invert max-w-none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
