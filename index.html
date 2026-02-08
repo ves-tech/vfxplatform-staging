@@ -56,15 +56,19 @@
 
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased min-h-screen flex flex-col">
-  <nav class="bg-gray-900 sticky top-0 z-50">
+  <nav class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
   <div class="container mx-auto px-4 max-w-6xl">
     <div class="flex items-center justify-between h-16">
-      <a href="/" class="text-white font-semibold text-lg hover:text-gray-300 transition-colors">
-        VFX Reference Platform
+      <a href="/" class="flex items-center gap-2 text-gray-900 dark:text-white font-semibold text-lg hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+          <path d="M16 1.5L28.5 8.75V23.25L16 30.5L3.5 23.25V8.75L16 1.5Z" fill="#2563EB" stroke="#1D4ED8" stroke-width="1"/>
+          <text x="16" y="18.5" text-anchor="middle" font-size="9" font-weight="700" fill="white" font-family="system-ui, sans-serif">VFX</text>
+        </svg>
+        <span>Reference Platform</span>
       </a>
 
       <!-- Mobile menu button -->
-      <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -74,32 +78,32 @@
       <div class="hidden md:flex items-center space-x-1">
         
         <a href="/"
-           class="px-3 py-2 text-sm text-gray-300 hover:text-white rounded-md transition-colors text-white bg-gray-800">
+           class="px-3 py-2 text-sm rounded-md transition-colors text-blue-600 dark:text-blue-400 font-medium">
           Home
         </a>
         
         <a href="/compare.html"
-           class="px-3 py-2 text-sm text-gray-300 hover:text-white rounded-md transition-colors ">
+           class="px-3 py-2 text-sm rounded-md transition-colors text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
           Compare
         </a>
         
         <a href="/linux/"
-           class="px-3 py-2 text-sm text-gray-300 hover:text-white rounded-md transition-colors ">
+           class="px-3 py-2 text-sm rounded-md transition-colors text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
           Linux
         </a>
         
         <a href="/FAQ/"
-           class="px-3 py-2 text-sm text-gray-300 hover:text-white rounded-md transition-colors ">
+           class="px-3 py-2 text-sm rounded-md transition-colors text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
           FAQ
         </a>
         
         <a href="/about/"
-           class="px-3 py-2 text-sm text-gray-300 hover:text-white rounded-md transition-colors ">
+           class="px-3 py-2 text-sm rounded-md transition-colors text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
           About
         </a>
         
         <a href="/contact/"
-           class="px-3 py-2 text-sm text-gray-300 hover:text-white rounded-md transition-colors ">
+           class="px-3 py-2 text-sm rounded-md transition-colors text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
           Contact
         </a>
         
@@ -107,7 +111,7 @@
         <button
   id="dark-mode-toggle"
   type="button"
-  class="p-2 rounded-lg text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-600 transition-colors"
+  class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 transition-colors"
   aria-label="Toggle dark mode"
 >
   <svg id="dark-mode-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -121,27 +125,27 @@
     <!-- Mobile navigation -->
     <div id="mobile-menu" class="hidden md:hidden pb-4">
       
-      <a href="/" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">
+      <a href="/" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">
         Home
       </a>
       
-      <a href="/compare.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">
+      <a href="/compare.html" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">
         Compare
       </a>
       
-      <a href="/linux/" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">
+      <a href="/linux/" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">
         Linux
       </a>
       
-      <a href="/FAQ/" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">
+      <a href="/FAQ/" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">
         FAQ
       </a>
       
-      <a href="/about/" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">
+      <a href="/about/" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">
         About
       </a>
       
-      <a href="/contact/" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">
+      <a href="/contact/" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">
         Contact
       </a>
       
@@ -149,7 +153,7 @@
         <button
   id="dark-mode-toggle"
   type="button"
-  class="p-2 rounded-lg text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-600 transition-colors"
+  class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 transition-colors"
   aria-label="Toggle dark mode"
 >
   <svg id="dark-mode-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -171,1710 +175,1833 @@
 </script>
 
 
-  <main class="flex-1 container mx-auto px-4 py-8 max-w-6xl">
+  <main class="flex-1">
     
 
 
 
-<p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-12">
-  The VFX Reference Platform is a set of tool and library versions to be used as a common target platform for building software for the VFX industry. Its purpose is to minimise incompatibilities between different software packages, ease the support burden for integrated pipelines and encourage further adoption of Linux by both studios and software vendors. The Reference Platform is updated annually by a group of software vendors in collaboration with the <a href="https://www.vesglobal.org/technology-committee-activities/" class="text-blue-600 dark:text-blue-400 hover:underline">Visual Effects Society Technology Committee</a>.
-</p>
+<!-- Hero Section -->
+<section class="bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="py-16 md:py-24">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+          VFX Reference<br>
+          <span class="text-blue-600 dark:text-blue-400">Platform</span>
+        </h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+          The VFX Reference Platform defines a set of tool and library versions to establish a consistent build target for software providers. Its purpose is to minimise incompatibilities between different software packages, ease the support burden for integrated pipelines and encourage further adoption of Linux.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#reference-platform" class="inline-flex items-center px-6 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors">
+            View Latest Platform
+          </a>
+          <a href="https://groups.google.com/g/vfx-platform-discuss" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+            Join Discussion
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h2 class="text-2xl font-semibold mb-4" id="current-status">Current Status</h2>
+<!-- Current Status -->
+<section class="container mx-auto px-4 max-w-6xl py-12" id="current-status">
+  <div class="section-heading">
+    <h2>Current Status</h2>
+  </div>
 
-<p class="mb-4">The Calendar Year 2026 (CY2026) Reference Platform is the target for all major software releases in 2026.</p>
-
-
-
-
-
-
-
-
-
-<div class="space-y-5 text-gray-600 dark:text-gray-300">
-  
-  <p>
-    <strong>5th November 2025</strong> - CY2026 is now Final and will be effective from January 1st. All package versions called out by the platform are now released. In 2021, the Imath library was split off from the OpenEXR 3 release into its own separately released package. Since Imath types are part of the OpenEXR API/ABI (as well other libraries such as Alembic), the OpenEXR / Imath maintainers have requested that the VFX Platform call out a specific, compatible version of Imath to avoid ambiguity.
+  <p class="mb-6 text-gray-600 dark:text-gray-300">
+    The Calendar Year 2026 (CY2026) Reference Platform is the target for all major software releases in 2026.
   </p>
+
   
-  <p>
-    <strong>7th May 2025</strong> - CY2026 Draft published, with a number of significant changes to gcc, glibc, and Qt. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/g/vfx-platform-discuss">vfx-platform-discuss</a>.
-  </p>
+
+
+
+
+
+
+
+
+<div class="space-y-4">
   
-  <p>
-    <strong>3rd November 2024</strong> - CY2025 updated to confirm the planned new releases for ACES, OpenColorIO, OpenEXR, and OpenVDB.
-  </p>
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-600 text-white">
+        Latest
+      </span>
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        5th November 2025
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2026 is now Final and will be effective from January 1st. All package versions called out by the platform are now released. In 2021, the Imath library was split off from the OpenEXR 3 release into its own separately released package. Since Imath types are part of the OpenEXR API/ABI (as well other libraries such as Alembic), the OpenEXR / Imath maintainers have requested that the VFX Platform call out a specific, compatible version of Imath to avoid ambiguity.
+    </p>
+  </div>
   
-  <p>
-    <strong>2nd September 2024</strong> - New report published! The <a href="https://bit.ly/VFXlinux24">2024 VFX/Animation Studio Workstation Linux Report</a> is now available giving an insight into the current state of Linux on studio workstations.
-  </p>
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        7th May 2025
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2026 Draft published, with a number of significant changes to gcc, glibc, and Qt. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/g/vfx-platform-discuss">vfx-platform-discuss</a>.
+    </p>
+  </div>
   
-  <p>
-    <strong>2nd September 2024</strong> - CY2025 is now Final and will be effective from January 1st. Confirmation of versions for ACES, OpenColorIO, and OpenEXR will follow by early October, and OpenVDB by early November pending the timely release of new versions. As always, if any major issues are discovered with CY2025 then they will be shared with the community to decide whether a late change is required.
-  </p>
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        3rd November 2024
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2025 updated to confirm the planned new releases for ACES, OpenColorIO, OpenEXR, and OpenVDB.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        2nd September 2024
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      New report published! The <a href="https://bit.ly/VFXlinux24">2024 VFX/Animation Studio Workstation Linux Report</a> is now available giving an insight into the current state of Linux on studio workstations.
+    </p>
+  </div>
   
 </div>
 
 
-<p class="mt-6 mb-8">
-  <a href="/platform_history.html#previous-status-updates" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">Previous status updates...</a>
-</p>
 
-<h2 class="text-2xl font-semibold mb-4" id="reference-platform">Reference Platform</h2>
+  <p class="mt-6 text-center">
+    <a href="/platform_history.html#previous-status-updates" class="text-base text-blue-600 dark:text-blue-400 hover:underline">
+      Previous status updates &rarr;
+    </a>
+  </p>
+</section>
 
-<p class="mb-4">Each annual reference platform is designated by the calendar year in which major product releases should be targeting that particular reference.</p>
+<!-- Reference Platform -->
+<section class="container mx-auto px-4 max-w-6xl pt-6 pb-12" id="reference-platform">
+  <div class="section-heading">
+    <h2>Reference Platform</h2>
+  </div>
 
-<p class="mb-4">
-  All versions should be considered exact required versions, except for those components where
-  <span class="whitespace-nowrap text-gray-500">&#8595;&#8593;</span>
-  indicates that:
-</p>
+  <div class="info-box mb-8">
+    <div class="flex gap-3">
+      <svg class="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <div>
+        <p class="text-sm text-gray-700 dark:text-gray-200 mb-2">
+          Each annual reference platform is designated by the calendar year in which major product releases should be targeting that particular reference.
+        </p>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
+          All versions should be considered exact required versions, except for those components where
+          <span class="whitespace-nowrap text-gray-500">&#8595;&#8593;</span>
+          indicates that:
+        </p>
+        <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1">
+          <li>For systems (or software) providing the library at runtime, versions should be considered <em>minimum version required.</em></li>
+          <li>Otherwise, for software building against the library, versions should be considered <em>highest version allowed.</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-<ul class="list-disc list-inside mb-6 text-gray-600 dark:text-gray-300 space-y-1">
-  <li>for systems (or software) providing the library at runtime, versions should be considered <em>minimum version required.</em></li>
-  <li>otherwise, for software building software against the library, versions should be considered <em>highest version allowed</em></li>
-</ul>
+  
 
 
 
-
-
-
-<div class="overflow-x-auto">
-  <table class="platform-table">
-    <thead>
-      <tr>
-        <th scope="col" class="text-left" colspan="2"></th>
+<div class="platform-table-wrapper">
+  <div class="overflow-x-auto">
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th scope="col">Component</th>
+          
+          <th scope="col" class="current-year">CY2026</th>
+          
+          <th scope="col">CY2025</th>
+          
+          <th scope="col">CY2024</th>
+          
+          <th scope="col">CY2023</th>
+          
+        </tr>
+      </thead>
+      <tbody>
         
-        <th scope="col">CY2026</th>
-        
-        <th scope="col">CY2025</th>
-        
-        <th scope="col">CY2024</th>
-        
-        <th scope="col">CY2023</th>
-        
-        
-        <th scope="col"></th>
-        
-      </tr>
-    </thead>
-    <tbody>
-      
-        
-        
-
-        
-          <tr class="category-linux">
-            
-              <td class="font-bold text-center align-middle whitespace-nowrap" rowspan="2">
-                Linux
-              </td>
-              
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              gcc
-              
-                <span class="text-xs text-gray-500 dark:text-gray-400" title="Minimum/Maximum version semantics apply">&#8595;&#8593;</span>
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">14.2</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">11.2.1</span>
-                  
-                    <br><small class="text-gray-500 dark:text-gray-400">(New libstdc++ ABI)</small>
-                  
-                  
-                    <br><small><a href="#footnote-gcc9" data-note-id="footnote-gcc9" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">11.2.1</span>
-                  
-                    <br><small class="text-gray-500 dark:text-gray-400">(New libstdc++ ABI)</small>
-                  
-                  
-                    <br><small><a href="#footnote-gcc9" data-note-id="footnote-gcc9" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">11.2.1</span>
-                  
-                    <br><small class="text-gray-500 dark:text-gray-400">(Switch to new libstdc++ ABI)</small>
-                  
-                  
-                    <br><small><a href="#footnote-gcc9" data-note-id="footnote-gcc9" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
-                  
-                
-              </td>
-            
-
-            
-              <td class="text-center align-middle whitespace-nowrap" rowspan="23">
-                <a href="/platform_history.html" class="text-blue-600 dark:text-blue-400 hover:underline text-sm">
-                  Earlier<br>Platforms
-                </a>
-              </td>
-            
+          <!-- Category header row -->
+          <tr class="category-header">
+            <td colspan="5">Linux</td>
           </tr>
+
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                gcc
+                
+                  <span class="text-xs text-gray-500 dark:text-gray-400" title="Minimum/Maximum version semantics apply">&#8595;&#8593;</span>
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">14.2</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">11.2.1</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(New libstdc++ ABI)</small>
+                    
+                    
+                      <br><small><a href="#footnote-gcc9" data-note-id="footnote-gcc9" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">11.2.1</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(New libstdc++ ABI)</small>
+                    
+                    
+                      <br><small><a href="#footnote-gcc9" data-note-id="footnote-gcc9" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">11.2.1</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Switch to new libstdc++ ABI)</small>
+                    
+                    
+                      <br><small><a href="#footnote-gcc9" data-note-id="footnote-gcc9" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                glibc
+                
+                  <span class="text-xs text-gray-500 dark:text-gray-400" title="Minimum/Maximum version semantics apply">&#8595;&#8593;</span>
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">2.28</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.28</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.28</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.28</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
         
-          <tr class="category-linux">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              glibc
-              
-                <span class="text-xs text-gray-500 dark:text-gray-400" title="Minimum/Maximum version semantics apply">&#8595;&#8593;</span>
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.28</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.28</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.28</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.28</span>
-                  
-                  
-                
-              </td>
-            
-
-            
+          <!-- Category header row -->
+          <tr class="category-header">
+            <td colspan="5">macOS</td>
           </tr>
+
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                Minimum Deployment Target
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">14.0</span>
+                    
+                    
+                      <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">12.0</span>
+                    
+                    
+                      <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">11.0</span>
+                    
+                    
+                      <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">11.0</span>
+                    
+                    
+                      <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+            </tr>
+          
         
-      
-        
-        
-
-        
-          <tr class="category-macos">
-            
-              <td class="font-bold text-center align-middle whitespace-nowrap" rowspan="1">
-                macOS
-              </td>
-              
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              Minimum Deployment Target
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">14.0</span>
-                  
-                  
-                    <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">12.0</span>
-                  
-                  
-                    <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">11.0</span>
-                  
-                  
-                    <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">11.0</span>
-                  
-                  
-                    <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
-                  
-                
-              </td>
-            
-
-            
+          <!-- Category header row -->
+          <tr class="category-header">
+            <td colspan="5">Windows</td>
           </tr>
+
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                Minimum Platform Toolset
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">Visual Studio 2022 v17.6 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">Visual Studio 2022 v17.6 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">Visual Studio 2022 v17.4 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">Visual Studio 2022</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                Windows SDK
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">10.0.22621 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">10.0.20348 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">10.0.20348 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">10.0.19041 or later</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
         
-      
-        
-        
-
-        
-          <tr class="category-windows">
-            
-              <td class="font-bold text-center align-middle whitespace-nowrap" rowspan="2">
-                Windows
-              </td>
-              
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              Minimum Platform Toolset
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">Visual Studio 2022 v17.6 or later</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">Visual Studio 2022 v17.6 or later</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">Visual Studio 2022 v17.4 or later</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">Visual Studio 2022</span>
-                  
-                  
-                
-              </td>
-            
-
-            
+          <!-- Category header row -->
+          <tr class="category-header">
+            <td colspan="5">Common Components</td>
           </tr>
+
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                Python
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">3.13.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.11.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.11.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.10.x</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                Qt
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">6.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">6.5.x</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(6.8 planned for CY2026)</small>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">6.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.15.x</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(6.5 planned for CY2024)</small>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                PyQt
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">6.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">6.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">6.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.15</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                PySide
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">6.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">6.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">6.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.15</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                NumPy
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">2.3.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.26.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.24.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.23.x</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                Imath
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">3.2.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.1.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.1.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.1.x</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                OpenEXR
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">3.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.3.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.2.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.1.x</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                Ptex
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">2.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                OpenSubdiv
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">3.7.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.6.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.6.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                OpenVDB
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">13.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">12.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">11.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">10.x</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                Alembic
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">1.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                FBX
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">2020.2 - 2020.latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020.2 - 2020.latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020.2 - 2020.latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020.2 - 2020.latest</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                OpenColorIO
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">2.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.3.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.2.x</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                ACES
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">2.0</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.0</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.3</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.3</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                Boost
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">1.88</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.85</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.82</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.80</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                oneTBB/TBB
+                
+                  <span class="text-xs text-gray-500 dark:text-gray-400" title="Minimum/Maximum version semantics apply">&#8595;&#8593;</span>
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">2022.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2021.x</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Move to oneTBB)</small>
+                    
+                    
+                      <br><small><a href="#footnote-tbb" data-note-id="footnote-tbb" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020 Update 3</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Move to oneTBB deferred to CY2025)</small>
+                    
+                    
+                      <br><small><a href="#footnote-tbb" data-note-id="footnote-tbb" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020 Update 3</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Plan to move to oneTBB in CY2024)</small>
+                    
+                    
+                      <br><small><a href="#footnote-tbb" data-note-id="footnote-tbb" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                oneMKL/MKL
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">2025</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2024</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Move to oneMKL)</small>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Move to oneMKL deferred to CY2025)</small>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Plan to move to oneMKL in CY2024)</small>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr>
+              <td class="font-semibold whitespace-nowrap">
+                C++ API/SDK
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                <td class="text-sm current-year">
+                  
+                    <span class="font-mono">C++20</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">C++17</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">C++17</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">C++17</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
         
-          <tr class="category-windows">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              Windows SDK
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">10.0.22621 or later</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">10.0.20348 or later</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">10.0.20348 or later</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">10.0.19041 or later</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-      
-        
-        
-
-        
-          <tr class="category-components">
-            
-              <td class="font-bold text-center align-middle whitespace-nowrap" rowspan="18">
-                Common Components
-              </td>
-              
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              Python
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.13.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.11.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.11.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.10.x</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              Qt
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">6.8.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">6.5.x</span>
-                  
-                    <br><small class="text-gray-500 dark:text-gray-400">(6.8 planned for CY2026)</small>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">6.5.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">5.15.x</span>
-                  
-                    <br><small class="text-gray-500 dark:text-gray-400">(6.5 planned for CY2024)</small>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              PyQt
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">6.8.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">6.5.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">6.5.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">5.15</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              Qt for Python (PySide)
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">6.8.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">6.5.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">6.5.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">5.15</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              NumPy
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.3.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">1.26.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">1.24.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">1.23.x</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              Imath
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.2.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.1.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.1.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.1.x</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              OpenEXR
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.4.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.3.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.2.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.1.x</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              Ptex
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.4.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.4.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.4.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.4.x</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              OpenSubdiv
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.7.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.6.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.6.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">3.5.x</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              OpenVDB
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">13.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">12.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">11.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">10.x</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              Alembic
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">1.8.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">1.8.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">1.8.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">1.8.x</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              FBX
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2020.2 - 2020.latest</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2020.2 - 2020.latest</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2020.2 - 2020.latest</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2020.2 - 2020.latest</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              OpenColorIO
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.5.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.4.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.3.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.2.x</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              ACES
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.0</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2.0</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">1.3</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">1.3</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              Boost
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">1.88</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">1.85</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">1.82</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">1.80</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              oneTBB/TBB
-              
-                <span class="text-xs text-gray-500 dark:text-gray-400" title="Minimum/Maximum version semantics apply">&#8595;&#8593;</span>
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2022.x</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2021.x</span>
-                  
-                    <br><small class="text-gray-500 dark:text-gray-400">(Move to oneTBB)</small>
-                  
-                  
-                    <br><small><a href="#footnote-tbb" data-note-id="footnote-tbb" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2020 Update 3</span>
-                  
-                    <br><small class="text-gray-500 dark:text-gray-400">(Move to oneTBB deferred to CY2025)</small>
-                  
-                  
-                    <br><small><a href="#footnote-tbb" data-note-id="footnote-tbb" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2020 Update 3</span>
-                  
-                    <br><small class="text-gray-500 dark:text-gray-400">(Plan to move to oneTBB in CY2024)</small>
-                  
-                  
-                    <br><small><a href="#footnote-tbb" data-note-id="footnote-tbb" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              oneMKL/MKL
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2025</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2024</span>
-                  
-                    <br><small class="text-gray-500 dark:text-gray-400">(Move to oneMKL)</small>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2020</span>
-                  
-                    <br><small class="text-gray-500 dark:text-gray-400">(Move to oneMKL deferred to CY2025)</small>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">2020</span>
-                  
-                    <br><small class="text-gray-500 dark:text-gray-400">(Plan to move to oneMKL in CY2024)</small>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-          <tr class="category-components">
-            
-
-            <td class="font-semibold text-left whitespace-nowrap">
-              C++ API/SDK
-              
-            </td>
-
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">C++20</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">C++17</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">C++17</span>
-                  
-                  
-                
-              </td>
-            
-              
-              
-
-              
-
-              <td class="text-sm">
-                
-                  <span class="font-mono">C++17</span>
-                  
-                  
-                
-              </td>
-            
-
-            
-          </tr>
-        
-      
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 
-<h2 class="text-2xl font-semibold mb-4 mt-16" id="support-guidance">Support Guidance</h2>
+<div class="text-right mt-3">
+  <a href="/platform_history.html" class="text-sm text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1">
+    View Earlier Platforms
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+    </svg>
+  </a>
+</div>
 
-<p class="mb-4 text-gray-600 dark:text-gray-300">
-  Providers of software libraries focused on VFX and animation content creation should aim to support their releases for the current calendar year and the three preceding years with compatible updates. Studios and end users should have no expectation of support for older libraries.
-</p>
 
-<p class="mb-8 text-gray-600 dark:text-gray-300">
-  The VFX Reference Platform strongly recommends open source project maintainers provide a level of support described by the <a href="https://bestpractices.coreinfrastructure.org/en/criteria" class="text-blue-600 dark:text-blue-400 hover:underline">FLOSS Best Practices Criteria</a>, which is already a requirement for all Academy Software Foundation projects.
-</p>
+</section>
 
-<h2 class="text-2xl font-semibold mb-4" id="useful-links">Useful Links</h2>
+<!-- Support Guidance -->
+<section class="container mx-auto px-4 max-w-6xl py-12" id="support-guidance">
+  <div class="section-heading">
+    <h2>Support Guidance</h2>
+  </div>
 
-<ul class="list-disc list-inside mb-8 text-gray-600 dark:text-gray-300 space-y-2">
-  <li><a href="https://bit.ly/VRP21Rep" class="text-blue-600 dark:text-blue-400 hover:underline">2021 Studio Platform Survey Report</a>.</li>
-  <li><a href="https://vfxpy.com/" class="text-blue-600 dark:text-blue-400 hover:underline">VFXpy Python 3 Compatibility Tracker</a> for common VFX and animation software packages.</li>
-  <li>ASWF <a href="https://github.com/academySoftwareFoundation/aswf-docker" class="text-blue-600 dark:text-blue-400 hover:underline">Github</a> and <a href="https://hub.docker.com/u/aswf" class="text-blue-600 dark:text-blue-400 hover:underline">Docker Hub</a> repositories for "ready to build" containers implementing VFX Reference Platform compliant build environments.</li>
-  <li>Tracking <a href="https://docs.google.com/spreadsheets/d/1-8VdfspUBpkYJzfKKovI-H2bZeb5Wn3cuNPsq_Ho3S8/edit?usp=sharing" class="text-blue-600 dark:text-blue-400 hover:underline">major digital content creation tool version compatibility</a> with VFX Reference Platform.</li>
-  <li><a href="https://docs.google.com/spreadsheets/d/1EwRlz5ZYObEOdBfIk8iTX5thlpTyEAfp3bxOgAfFOiU/edit?usp=sharing" class="text-blue-600 dark:text-blue-400 hover:underline">VFX Industry Build Matrix</a></li>
-</ul>
+  <div class="grid md:grid-cols-2 gap-6">
+    <!-- Support Window card -->
+    <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 bg-white dark:bg-gray-800/50">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center">
+          <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Support Window</h3>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+        Providers of software libraries focused on VFX and animation content creation should aim to support their releases for the current calendar year and the three preceding years with compatible updates. Studios and end users should have no expectation of support for older libraries.
+      </p>
+    </div>
+
+    <!-- Best Practices card -->
+    <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 bg-white dark:bg-gray-800/50">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center">
+          <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Best Practices</h3>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+        The VFX Reference Platform strongly recommends open source project maintainers provide a level of support described by the <a href="https://bestpractices.coreinfrastructure.org/en/criteria" class="text-blue-600 dark:text-blue-400 hover:underline">FLOSS Best Practices Criteria</a>, which is already a requirement for all Academy Software Foundation projects.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Useful Links -->
+<section class="container mx-auto px-4 max-w-6xl py-12 mb-4" id="useful-links">
+  <div class="section-heading">
+    <h2>Useful Links</h2>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    
+    <a href="https://bit.ly/VRP21Rep" class="group border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-sm transition-all">
+      <div class="flex items-start gap-3">
+        <div class="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+          
+          <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+          </svg>
+          
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            2021 Studio Platform Survey Report
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            Results from the 2021 survey of VFX studio platform configurations and requirements.
+          </p>
+        </div>
+      </div>
+    </a>
+    
+    <a href="https://vfxpy.com/" class="group border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-sm transition-all">
+      <div class="flex items-start gap-3">
+        <div class="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+          
+          <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+          </svg>
+          
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            VFXpy Python 3 Compatibility Tracker
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            Track Python 3 compatibility for common VFX and animation software packages.
+          </p>
+        </div>
+      </div>
+    </a>
+    
+    <a href="https://github.com/AcademySoftwareFoundation/aswf-docker" class="group border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-sm transition-all">
+      <div class="flex items-start gap-3">
+        <div class="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+          
+          <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+          </svg>
+          
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            ASWF Docker Containers
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            Ready-to-build containers implementing VFX Reference Platform compliant build environments.
+          </p>
+        </div>
+      </div>
+    </a>
+    
+    <a href="https://docs.google.com/spreadsheets/d/1-8VdfspUBpkYJzfKKovI-H2bZeb5Wn3cuNPsq_Ho3S8/edit?usp=sharing" class="group border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-sm transition-all">
+      <div class="flex items-start gap-3">
+        <div class="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+          
+          <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+          </svg>
+          
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            DCC Tool Version Compatibility
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            Track major digital content creation tool version compatibility with each platform year.
+          </p>
+        </div>
+      </div>
+    </a>
+    
+    <a href="https://docs.google.com/spreadsheets/d/1EwRlz5ZYObEOdBfIk8iTX5thlpTyEAfp3bxOgAfFOiU/edit?usp=sharing" class="group border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-sm transition-all">
+      <div class="flex items-start gap-3">
+        <div class="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+          
+          <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18M10 3v18M14 3v18"/>
+          </svg>
+          
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            VFX Industry Build Matrix
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            Cross-reference of build configurations used across the VFX industry.
+          </p>
+        </div>
+      </div>
+    </a>
+    
+  </div>
+</section>
 
 
 
@@ -1994,11 +2121,69 @@ sudo yum -y install devtoolset-6
 
   </main>
 
-  <footer class="bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-12">
-  <div class="container mx-auto px-4 py-6 max-w-6xl">
-    <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
-      <em>Any reference made in the VFX Reference Platform to any company or any other entity, or to their services or products, is not an endorsement or recommendation nor should it imply any such endorsement or recommendation of the quality or fitness of purpose of that company or entity, or its services or products. In no event shall the Visual Effects Society be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services identified in the VFX Reference Platform or the <a href="https://vesglobal.org" class="text-blue-600 dark:text-blue-400 hover:underline">Visual Effects Society website</a>.</em>
-    </p>
+  <footer class="bg-gray-900 dark:bg-gray-950 text-gray-300 mt-12">
+  <div class="container mx-auto px-4 py-12 max-w-6xl">
+    <div class="grid md:grid-cols-3 gap-8 mb-8">
+      <!-- About column -->
+      <div>
+        <a href="/" class="flex items-center gap-2 text-white font-semibold text-lg mb-3">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+            <path d="M16 1.5L28.5 8.75V23.25L16 30.5L3.5 23.25V8.75L16 1.5Z" fill="#3B82F6" stroke="#2563EB" stroke-width="1"/>
+            <text x="16" y="18.5" text-anchor="middle" font-size="9" font-weight="700" fill="white" font-family="system-ui, sans-serif">VFX</text>
+          </svg>
+          <span>Reference Platform</span>
+        </a>
+        <p class="text-sm text-gray-400 leading-relaxed">
+          A standardized set of tool and library versions to minimize incompatibilities between software packages in the VFX industry.
+        </p>
+      </div>
+
+      <!-- Resources column -->
+      <div>
+        <h3 class="text-white font-semibold mb-3">Resources</h3>
+        <ul class="space-y-2 text-sm">
+          
+          <li>
+            <a href="https://groups.google.com/g/vfx-platform-discuss" class="text-gray-400 hover:text-white transition-colors">
+              Discussion Group
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.aswf.io/" class="text-gray-400 hover:text-white transition-colors">
+              Academy Software Foundation
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://vfxpy.com/" class="text-gray-400 hover:text-white transition-colors">
+              VFXpy Tracker
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <!-- Contact column -->
+      <div>
+        <h3 class="text-white font-semibold mb-3">Contact</h3>
+        <p class="text-sm text-gray-400 mb-2">
+          <a href="mailto:feedback@vfxplatform.com" class="hover:text-white transition-colors">
+            feedback@vfxplatform.com
+          </a>
+        </p>
+        <p class="text-sm text-gray-400">
+          Updated annually in collaboration with the Visual Effects Society Technology Committee.
+        </p>
+      </div>
+    </div>
+
+    <!-- Legal disclaimer -->
+    <div class="border-t border-gray-800 pt-6">
+      <p class="text-xs text-gray-500 leading-relaxed">
+        <em>Any reference made in the VFX Reference Platform to any company or any other entity, or to their services or products, is not an endorsement or recommendation nor should it imply any such endorsement or recommendation of the quality or fitness of purpose of that company or entity, or its services or products. In no event shall the Visual Effects Society be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services identified in the VFX Reference Platform or the <a href="https://vesglobal.org" class="text-blue-400 hover:text-blue-300 hover:underline">Visual Effects Society website</a>.</em>
+      </p>
+    </div>
   </div>
 </footer>
 
