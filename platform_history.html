@@ -188,7 +188,7 @@
 </script>
 
 
-  <main class="flex-1 container mx-auto px-4 py-8 max-w-6xl">
+  <main class="flex-1">
     
 
 
@@ -197,34 +197,62 @@
 
 
 
-<h2 class="text-2xl font-semibold mb-4">Reference Platform History</h2>
+<!-- Hero Section -->
+<section class="bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="py-12 md:py-16">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          Platform History
+        </h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+          All VFX Reference Platform targets going back to the initial release for CY2014.
+        </p>
+        <a href="/vfxplatform-staging/compare.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+          </svg>
+          Compare years side-by-side
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p class="text-lg text-gray-600 dark:text-gray-300 mb-4">
-  Below is a list of all the VFX Reference Platform targets going back to the initial release for CY2014.
-</p>
+<!-- Version Semantics -->
+<section class="container mx-auto px-4 max-w-6xl py-12">
+  <div class="info-box mb-8">
+    <div class="flex gap-3">
+      <svg class="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <div>
+        <p class="text-sm text-gray-700 dark:text-gray-200 mb-2">
+          Each annual reference platform is designated by the calendar year in which major product releases should be targeting that particular reference.
+        </p>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
+          All versions should be considered exact required versions, except for those components where
+          <span class="whitespace-nowrap text-gray-500">&#8595;&#8593;</span>
+          indicates that:
+        </p>
+        <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1">
+          <li>For systems (or software) providing the library at runtime, versions should be considered <em>minimum version required.</em></li>
+          <li>Otherwise, for software building against the library, versions should be considered <em>highest version allowed.</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p class="mb-4 text-gray-600 dark:text-gray-300">
-  Each annual reference platform is designated by the calendar year in which major product releases should be targeting that particular reference.
-</p>
+<!-- All Platforms -->
+<section class="container mx-auto px-4 max-w-6xl pt-4 pb-12">
+  <div class="section-heading">
+    <h2>All Platforms</h2>
+  </div>
 
-<p class="mb-4 text-gray-600 dark:text-gray-300">
-  All versions should be considered exact required versions, except for those components where
-  <span class="whitespace-nowrap text-gray-500">&#8595;&#8593;</span>
-  indicates that:
-</p>
-
-<ul class="list-disc list-inside mb-6 text-gray-600 dark:text-gray-300 space-y-1">
-  <li>for systems (or software) providing the library at runtime, versions should be considered <em>minimum version required.</em></li>
-  <li>otherwise, for software building software against the library, versions should be considered <em>highest version allowed</em></li>
-</ul>
-
-<p class="mb-8 text-gray-600 dark:text-gray-300">
-  <a href="/vfxplatform-staging/compare.html" class="text-blue-600 dark:text-blue-400 hover:underline">Compare years side-by-side &rarr;</a>
-</p>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     
+      
 
 
 
@@ -241,6 +269,10 @@
 
   <div class="year-card-content">
     
+      
+      
+
+      
       <div class="year-card-section category-linux">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Linux</h4>
         <table class="year-card-table">
@@ -285,7 +317,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-macos">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">macOS</h4>
         <table class="year-card-table">
@@ -312,7 +349,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-windows">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Windows</h4>
         <table class="year-card-table">
@@ -353,7 +395,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-components">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Common Components</h4>
         <table class="year-card-table">
@@ -652,12 +699,13 @@
           </tbody>
         </table>
       </div>
+      
     
   </div>
 </div>
 
-  
     
+      
 
 
 
@@ -674,6 +722,10 @@
 
   <div class="year-card-content">
     
+      
+      
+
+      
       <div class="year-card-section category-linux">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Linux</h4>
         <table class="year-card-table">
@@ -722,7 +774,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-macos">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">macOS</h4>
         <table class="year-card-table">
@@ -749,7 +806,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-windows">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Windows</h4>
         <table class="year-card-table">
@@ -790,7 +852,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-components">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Common Components</h4>
         <table class="year-card-table">
@@ -1097,12 +1164,13 @@
           </tbody>
         </table>
       </div>
+      
     
   </div>
 </div>
 
-  
     
+      
 
 
 
@@ -1119,6 +1187,10 @@
 
   <div class="year-card-content">
     
+      
+      
+
+      
       <div class="year-card-section category-linux">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Linux</h4>
         <table class="year-card-table">
@@ -1167,7 +1239,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-macos">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">macOS</h4>
         <table class="year-card-table">
@@ -1194,7 +1271,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-windows">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Windows</h4>
         <table class="year-card-table">
@@ -1235,7 +1317,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-components">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Common Components</h4>
         <table class="year-card-table">
@@ -1540,12 +1627,13 @@
           </tbody>
         </table>
       </div>
+      
     
   </div>
 </div>
 
-  
     
+      
 
 
 
@@ -1562,6 +1650,10 @@
 
   <div class="year-card-content">
     
+      
+      
+
+      
       <div class="year-card-section category-linux">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Linux</h4>
         <table class="year-card-table">
@@ -1610,7 +1702,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-macos">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">macOS</h4>
         <table class="year-card-table">
@@ -1637,7 +1734,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-windows">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Windows</h4>
         <table class="year-card-table">
@@ -1678,7 +1780,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-components">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Common Components</h4>
         <table class="year-card-table">
@@ -1985,12 +2092,13 @@
           </tbody>
         </table>
       </div>
+      
     
   </div>
 </div>
 
-  
     
+      
 
 
 
@@ -2007,6 +2115,10 @@
 
   <div class="year-card-content">
     
+      
+      
+
+      
       <div class="year-card-section category-linux">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Linux</h4>
         <table class="year-card-table">
@@ -2053,7 +2165,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-macos">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">macOS</h4>
         <table class="year-card-table">
@@ -2080,7 +2197,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-windows">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Windows</h4>
         <table class="year-card-table">
@@ -2121,7 +2243,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-components">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Common Components</h4>
         <table class="year-card-table">
@@ -2422,12 +2549,13 @@
           </tbody>
         </table>
       </div>
+      
     
   </div>
 </div>
 
-  
     
+      
 
 
 
@@ -2444,6 +2572,10 @@
 
   <div class="year-card-content">
     
+      
+      
+
+      
       <div class="year-card-section category-linux">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Linux</h4>
         <table class="year-card-table">
@@ -2490,7 +2622,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-macos">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">macOS</h4>
         <table class="year-card-table">
@@ -2517,7 +2654,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-windows">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Windows</h4>
         <table class="year-card-table">
@@ -2558,7 +2700,12 @@
           </tbody>
         </table>
       </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-components">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Common Components</h4>
         <table class="year-card-table">
@@ -2861,12 +3008,13 @@
           </tbody>
         </table>
       </div>
+      
     
   </div>
 </div>
 
-  
     
+      
 
 
 
@@ -2883,6 +3031,10 @@
 
   <div class="year-card-content">
     
+      
+      
+
+      
       <div class="year-card-section category-linux">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Linux</h4>
         <table class="year-card-table">
@@ -2929,37 +3081,22 @@
           </tbody>
         </table>
       </div>
+      
     
-      <div class="year-card-section category-macos">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">macOS</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
-      <div class="year-card-section category-windows">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Windows</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-              
-
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-components">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Common Components</h4>
         <table class="year-card-table">
@@ -3250,12 +3387,13 @@
           </tbody>
         </table>
       </div>
+      
     
   </div>
 </div>
 
-  
     
+      
 
 
 
@@ -3272,6 +3410,10 @@
 
   <div class="year-card-content">
     
+      
+      
+
+      
       <div class="year-card-section category-linux">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Linux</h4>
         <table class="year-card-table">
@@ -3318,37 +3460,22 @@
           </tbody>
         </table>
       </div>
+      
     
-      <div class="year-card-section category-macos">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">macOS</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
-      <div class="year-card-section category-windows">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Windows</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-              
-
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-components">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Common Components</h4>
         <table class="year-card-table">
@@ -3639,12 +3766,13 @@
           </tbody>
         </table>
       </div>
+      
     
   </div>
 </div>
 
-  
     
+      
 
 
 
@@ -3661,6 +3789,10 @@
 
   <div class="year-card-content">
     
+      
+      
+
+      
       <div class="year-card-section category-linux">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Linux</h4>
         <table class="year-card-table">
@@ -3707,37 +3839,22 @@
           </tbody>
         </table>
       </div>
+      
     
-      <div class="year-card-section category-macos">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">macOS</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
-      <div class="year-card-section category-windows">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Windows</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-              
-
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-components">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Common Components</h4>
         <table class="year-card-table">
@@ -4026,12 +4143,13 @@
           </tbody>
         </table>
       </div>
+      
     
   </div>
 </div>
 
-  
     
+      
 
 
 
@@ -4048,6 +4166,10 @@
 
   <div class="year-card-content">
     
+      
+      
+
+      
       <div class="year-card-section category-linux">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Linux</h4>
         <table class="year-card-table">
@@ -4094,37 +4216,22 @@
           </tbody>
         </table>
       </div>
+      
     
-      <div class="year-card-section category-macos">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">macOS</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
-      <div class="year-card-section category-windows">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Windows</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-              
-
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-components">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Common Components</h4>
         <table class="year-card-table">
@@ -4413,12 +4520,13 @@
           </tbody>
         </table>
       </div>
+      
     
   </div>
 </div>
 
-  
     
+      
 
 
 
@@ -4435,6 +4543,10 @@
 
   <div class="year-card-content">
     
+      
+      
+
+      
       <div class="year-card-section category-linux">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Linux</h4>
         <table class="year-card-table">
@@ -4481,37 +4593,22 @@
           </tbody>
         </table>
       </div>
+      
     
-      <div class="year-card-section category-macos">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">macOS</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
-      <div class="year-card-section category-windows">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Windows</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-              
-
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-components">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Common Components</h4>
         <table class="year-card-table">
@@ -4800,12 +4897,13 @@
           </tbody>
         </table>
       </div>
+      
     
   </div>
 </div>
 
-  
     
+      
 
 
 
@@ -4822,6 +4920,10 @@
 
   <div class="year-card-content">
     
+      
+      
+
+      
       <div class="year-card-section category-linux">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Linux</h4>
         <table class="year-card-table">
@@ -4868,37 +4970,22 @@
           </tbody>
         </table>
       </div>
+      
     
-      <div class="year-card-section category-macos">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">macOS</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
-      <div class="year-card-section category-windows">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Windows</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-              
-
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-components">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Common Components</h4>
         <table class="year-card-table">
@@ -5113,12 +5200,13 @@
           </tbody>
         </table>
       </div>
+      
     
   </div>
 </div>
 
-  
     
+      
 
 
 
@@ -5135,6 +5223,10 @@
 
   <div class="year-card-content">
     
+      
+      
+
+      
       <div class="year-card-section category-linux">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Linux</h4>
         <table class="year-card-table">
@@ -5165,37 +5257,22 @@
           </tbody>
         </table>
       </div>
+      
     
-      <div class="year-card-section category-macos">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">macOS</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
-      <div class="year-card-section category-windows">
-        <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Windows</h4>
-        <table class="year-card-table">
-          <tbody>
-            
-              
+      
+      
 
-              
-            
-              
-
-              
-            
-          </tbody>
-        </table>
-      </div>
+      
     
+      
+      
+
+      
       <div class="year-card-section category-components">
         <h4 class="font-semibold text-sm mb-2 text-gray-700 dark:text-gray-300">Common Components</h4>
         <table class="year-card-table">
@@ -5398,213 +5475,726 @@
           </tbody>
         </table>
       </div>
+      
     
   </div>
 </div>
 
+    
+  </div>
+</section>
+
+<!-- Previous Status Updates -->
+<section class="container mx-auto px-4 max-w-6xl py-12" id="previous-status-updates">
+  <div class="section-heading">
+    <h2>Previous Status Updates</h2>
+  </div>
+
+  
+
+
+
+
+
+
+
+
+<div class="space-y-4">
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        18th August 2024
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2025 Draft updated. OpenEXR release window extended until Oct 1st. Minimum version of Visual Studio bumped to 17.6 (note the <a href="https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history#evergreen-bootstrappers">limited support window of the “long-term servicing channel”</a>). Python reluctantly reverted to 3.11 due to a <a href="https://groups.google.com/g/vfx-platform-discuss/c/yFbqXs2Pg_o/m/wBd7V8dsBAAJ">compatibility issue with Qt 6.5</a>. Upgrades to Qt 6.8 and a newer Python are planned for CY2026.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        16th June 2024
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2024 and CY2025 Draft updated to Windows SDK 10.0.20348 due to <a href="https://github.com/AcademySoftwareFoundation/aswf-docker/issues/274">compatibility requirements of Qt 6.5 WebEngine</a>.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        14th May 2024
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2025 Draft published, with the main change being a move to Intel’s oneAPI for TBB and MKL. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/g/vfx-platform-discuss">vfx-platform-discuss</a>.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        1st November 2023
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      New versions of OpenSubdiv and OpenVDB were released as scheduled and CY2024 has been updated accordingly.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        5th September 2023
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      <a href="https://youtu.be/lA0dZMhqlSo">The recording of the 2023 User Group meeting is now available</a>. Please note that the recommendation from the <a href="https://bit.ly/VFXlinux22">VFX Linux Distribution Recommendation Report</a> published last year is still as valid today as it was a year ago.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        4th September 2023
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2024 is now Final. Confirmation of versions for OpenSubdiv and OpenVDB will follow by early November pending the timely release of new versions. As always, if any major issues are discovered with CY2024 then they will be shared with the community to decide whether a late change is required.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        24th July 2023
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      The annual VFX Reference Platform User Group will be held on August 1st at 1pm PDT. This is a free online meeting for the whole community, no registration required. <a href="https://groups.google.com/g/vfx-platform-discuss/c/hbaG5fXkbcs">See here for details.</a>
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        16th May 2023
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2024 Draft published, with the main change being a move to Qt 6. Due to ongoing work required to migrate critical dependencies, the planned move to Intel’s oneAPI has been deferred until CY2025. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/g/vfx-platform-discuss">vfx-platform-discuss</a>.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        31st October 2022
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      Late changes to CY2023 have been applied to OpenSubdiv, OpenVDB, and OpenColorIO which all completed major new releases before the extended deadline of October 31st.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        9th October 2022
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      Late change to CY2023 due to new OpenSubdiv release, and after community consultation. OpenSubdiv will be updated to 3.5.x if a compatible USD release is published by October 31st.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        7th September 2022
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2023 is now Final. Confirmation of versions for OpenEXR, OpenVDB, OpenColorIO, and ACES will follow by early November pending the timely release of new versions. As always, if any major issues are discovered with CY2023 then they will be shared with the community to decide whether a late change is required. Please note the change to glibc may require a major Linux distro upgrade, and the <a href="/linux/">recent recommendation</a> for studios to migrate to RHEL, Rocky Linux, or AlmaLinux.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        9th August 2022
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      <a href="https://bit.ly/VFXlinux22">VFX Linux Distribution Recommendation Report</a> (pdf) published and <a href="/linux/">new Linux page</a> added.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        30th July 2022
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2023 Draft updated. Boost bumped to 1.80 and NumPy to 1.23.x
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        8th May 2022
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2023 Draft published. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/g/vfx-platform-discuss">vfx-platform-discuss</a>.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        1st January 2022
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      Software providers should now use CY2022 as the build target for all new major releases.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        31st October 2021
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      OpenVDB 9.x confirmed for CY2022 following the release of 9.0.0 supporting OpenEXR 3.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        1st September 2021
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2022 is now Final. The only anticipated change is the pending OpenVDB release which is due by November 1st. If any major issues are discovered then they will be shared with the community to decide whether a late change is required. In addition, a new Support Guidance section has been added towards the bottom of this page.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        23rd August 2021
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      A recording of the Birds of a Feather event <a href="https://youtu.be/i4tXrtJBqK0">is now available</a>.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        16th August 2021
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      Thank you to all those who attended the Birds of a Feather event last week, the <a href="https://bit.ly/3iFPkpJ">slide deck is now available</a>. This is a last call for feedback on CY2022 before it is locked for Final on September 1st.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        1st August 2021
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      Everyone is invited to attend the annual <a href="https://s2021.siggraph.org/presentation/?id=bof_138&amp;sess=sess434">VFX Reference Platform Birds of a Feather session at SIGGRAPH</a> on Wednesday August 11th at 12:30pm PT / 3:30pm ET / 8:30pm UK. This is an online session again this year, and <a href="https://s2021.siggraph.org/register/#reg-level-comparison">Basic Attendee</a> registration for the conference is required at a cost of $50.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        31st July 2021
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      Updates to CY2022 Draft for MKL, OpenEXR, and OpenVDB.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        22nd May 2021
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      Minor updates to CY2022 Draft for Ptex, with additional notes for ACES and macOS.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        16th May 2021
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2022 Draft published. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/g/vfx-platform-discuss">vfx-platform-discuss</a>.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        22nd March 2021
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2021 has been updated to revert OpenEXR from 3.0.x back to 2.4.x due to a late release of OpenEXR 3 meaning that software vendors continued to ship products using 2.4. A change in policy to only allow released versions to be included in each year’s VFX Reference Platform should prevent this from happening again in future. Also, FBX has been reverted to 2020.x due to there being no 2021.x released in time for CY2021.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        12th September 2020
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2021 is now Final. Further changes are not anticipated unless a major issue is discovered and the community supports a late change.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        20th August 2020
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      From CY2021 the VFX Reference Platform will support Windows and macOS in addition to Linux. Details added below, and feedback welcome. CY2021 will be finalized within the next 4 weeks.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        17th July 2020
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      Added gcc notes to CY2021 Draft with details on Redhat Developer Toolset and clang compatibility.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        16th June 2020
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2021 Draft published. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/forum/#!forum/vfx-platform-discuss">vfx-platform-discuss</a>.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        7th March 2020
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2020 updated - Added required patch for Qt for Python (PySide) and an alternative option of using 5.13.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        2nd November 2019
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      Late change approved to CY2020 - OpenEXR updated to 2.4.x.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        19th October 2019
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      Late change to CY2020 under review to accommodate an updated OpenEXR release. Proposed change is limited to OpenEXR moving to 2.4.x. Please <a href="mailto:feedback@vfxplatform.com">send feedback on this change</a> by 31st October.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        3rd August 2019
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      The CY2020 Platform is now Final with no further changes planned.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        1st May 2019
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2020 Draft published which includes the long-awaited move to Python 3. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/forum/#!forum/vfx-platform-discuss">vfx-platform-discuss</a>. Software vendors are encouraged to provide a Python 3 tech preview release this year to help studios with testing during migration efforts.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        12th September 2018
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2019 Final now published with OpenVDB updated to 6.x and ACES to 1.1 to reflect recent or imminent major releases of these important industry packages.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        22nd July 2018
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2019 Draft updated - OpenEXR upped to 2.3.x.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        22nd July 2018
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2019 Draft updated - minimum version of Python is now 2.7.9 to ensure support of PIP via PyPI.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        20th May 2018
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2019 Draft published. The move to Python 3 has been pushed to CY2020 due to the need to focus on upgrading to the latest Qt Long Term Support release. Software vendors are requested to provide a Python 3 tech preview release in 2019 to help studios with testing during migration efforts. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/forum/#!forum/vfx-platform-discuss">vfx-platform-discuss</a>.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        26th November 2017
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2018 has had a late change to the compiler version which is now gcc 6.3.1. This successfully resolves issues that were discovered with gcc 5.3.1.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        28th August 2017
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      Added a note for gcc 5 and updated the Qt note to include a link to the qtdeclarative modifications.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        3rd August 2017
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      The CY2018 Platform was ratified as Final at the annual SIGGRAPH VFX Reference Platform Birds of a Feather with no further planned changes.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        2nd July 2017
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      Minor updates to CY2018 Draft for Qt and ACES.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        29th April 2017
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2018 Draft published with significant upgrades to gcc and glibc. This also comes with notice of our intention to move to Python 3 for CY2019 in advance of Python 2 support ending in 2020. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/forum/#!forum/vfx-platform-discuss">vfx-platform-discuss</a>. We expect to publish CY2018 Final around SIGGRAPH in July.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        1st August 2016
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2017 Final now published with OpenSubdiv and OpenVDB being updated in addition to Boost, Ptex, Alembic and TBB as result of feedback to the Draft.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        28th June 2016
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      The VFX Reference Platform Qt modifications to the Qt 5.6.1 release are now available from these forks of <a href="https://github.com/autodesk-forks/qtbase/tree/adsk-contrib/vfx/5.6.1">qtbase</a> and <a href="https://github.com/autodesk-forks/qtx11extras/tree/adsk-contrib/vfx/5.6.1">qtx11extras</a>.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        20th June 2016
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      CY2017 Draft published for comment from the community. The theme for CY2017 is to minimize code changes in the year following the transition to Qt 5.
+    </p>
+  </div>
+  
+  <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-white dark:bg-gray-800/50">
+    <div class="flex items-center gap-3 mb-2">
+      
+      <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        27th October 2015
+      </span>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+      A late change has been proposed to CY2016 to move from Qt 5.5.x to Qt 5.6.x due to that version now being targeted as a Long Term Support release. Please <a href="http://bit.ly/CY2016Qt5">see here</a> for further details.
+    </p>
+  </div>
   
 </div>
 
-<h2 class="text-2xl font-semibold mb-6 mt-12" id="previous-status-updates">Previous Status Updates</h2>
 
-
-
-
-
-
-
-
-
-
-<div class="space-y-5 text-gray-600 dark:text-gray-300">
-  
-  <p>
-    <strong>18th August 2024</strong> - CY2025 Draft updated. OpenEXR release window extended until Oct 1st. Minimum version of Visual Studio bumped to 17.6 (note the <a href="https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history#evergreen-bootstrappers">limited support window of the “long-term servicing channel”</a>). Python reluctantly reverted to 3.11 due to a <a href="https://groups.google.com/g/vfx-platform-discuss/c/yFbqXs2Pg_o/m/wBd7V8dsBAAJ">compatibility issue with Qt 6.5</a>. Upgrades to Qt 6.8 and a newer Python are planned for CY2026.
-  </p>
-  
-  <p>
-    <strong>16th June 2024</strong> - CY2024 and CY2025 Draft updated to Windows SDK 10.0.20348 due to <a href="https://github.com/AcademySoftwareFoundation/aswf-docker/issues/274">compatibility requirements of Qt 6.5 WebEngine</a>.
-  </p>
-  
-  <p>
-    <strong>14th May 2024</strong> - CY2025 Draft published, with the main change being a move to Intel’s oneAPI for TBB and MKL. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/g/vfx-platform-discuss">vfx-platform-discuss</a>.
-  </p>
-  
-  <p>
-    <strong>1st November 2023</strong> - New versions of OpenSubdiv and OpenVDB were released as scheduled and CY2024 has been updated accordingly.
-  </p>
-  
-  <p>
-    <strong>5th September 2023</strong> - <a href="https://youtu.be/lA0dZMhqlSo">The recording of the 2023 User Group meeting is now available</a>. Please note that the recommendation from the <a href="https://bit.ly/VFXlinux22">VFX Linux Distribution Recommendation Report</a> published last year is still as valid today as it was a year ago.
-  </p>
-  
-  <p>
-    <strong>4th September 2023</strong> - CY2024 is now Final. Confirmation of versions for OpenSubdiv and OpenVDB will follow by early November pending the timely release of new versions. As always, if any major issues are discovered with CY2024 then they will be shared with the community to decide whether a late change is required.
-  </p>
-  
-  <p>
-    <strong>24th July 2023</strong> - The annual VFX Reference Platform User Group will be held on August 1st at 1pm PDT. This is a free online meeting for the whole community, no registration required. <a href="https://groups.google.com/g/vfx-platform-discuss/c/hbaG5fXkbcs">See here for details.</a>
-  </p>
-  
-  <p>
-    <strong>16th May 2023</strong> - CY2024 Draft published, with the main change being a move to Qt 6. Due to ongoing work required to migrate critical dependencies, the planned move to Intel’s oneAPI has been deferred until CY2025. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/g/vfx-platform-discuss">vfx-platform-discuss</a>.
-  </p>
-  
-  <p>
-    <strong>31st October 2022</strong> - Late changes to CY2023 have been applied to OpenSubdiv, OpenVDB, and OpenColorIO which all completed major new releases before the extended deadline of October 31st.
-  </p>
-  
-  <p>
-    <strong>9th October 2022</strong> - Late change to CY2023 due to new OpenSubdiv release, and after community consultation. OpenSubdiv will be updated to 3.5.x if a compatible USD release is published by October 31st.
-  </p>
-  
-  <p>
-    <strong>7th September 2022</strong> - CY2023 is now Final. Confirmation of versions for OpenEXR, OpenVDB, OpenColorIO, and ACES will follow by early November pending the timely release of new versions. As always, if any major issues are discovered with CY2023 then they will be shared with the community to decide whether a late change is required. Please note the change to glibc may require a major Linux distro upgrade, and the <a href="/linux/">recent recommendation</a> for studios to migrate to RHEL, Rocky Linux, or AlmaLinux.
-  </p>
-  
-  <p>
-    <strong>9th August 2022</strong> - <a href="https://bit.ly/VFXlinux22">VFX Linux Distribution Recommendation Report</a> (pdf) published and <a href="/linux/">new Linux page</a> added.
-  </p>
-  
-  <p>
-    <strong>30th July 2022</strong> - CY2023 Draft updated. Boost bumped to 1.80 and NumPy to 1.23.x
-  </p>
-  
-  <p>
-    <strong>8th May 2022</strong> - CY2023 Draft published. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/g/vfx-platform-discuss">vfx-platform-discuss</a>.
-  </p>
-  
-  <p>
-    <strong>1st January 2022</strong> - Software providers should now use CY2022 as the build target for all new major releases.
-  </p>
-  
-  <p>
-    <strong>31st October 2021</strong> - OpenVDB 9.x confirmed for CY2022 following the release of 9.0.0 supporting OpenEXR 3.
-  </p>
-  
-  <p>
-    <strong>1st September 2021</strong> - CY2022 is now Final. The only anticipated change is the pending OpenVDB release which is due by November 1st. If any major issues are discovered then they will be shared with the community to decide whether a late change is required. In addition, a new Support Guidance section has been added towards the bottom of this page.
-  </p>
-  
-  <p>
-    <strong>23rd August 2021</strong> - A recording of the Birds of a Feather event <a href="https://youtu.be/i4tXrtJBqK0">is now available</a>.
-  </p>
-  
-  <p>
-    <strong>16th August 2021</strong> - Thank you to all those who attended the Birds of a Feather event last week, the <a href="https://bit.ly/3iFPkpJ">slide deck is now available</a>. This is a last call for feedback on CY2022 before it is locked for Final on September 1st.
-  </p>
-  
-  <p>
-    <strong>1st August 2021</strong> - Everyone is invited to attend the annual <a href="https://s2021.siggraph.org/presentation/?id=bof_138&amp;sess=sess434">VFX Reference Platform Birds of a Feather session at SIGGRAPH</a> on Wednesday August 11th at 12:30pm PT / 3:30pm ET / 8:30pm UK. This is an online session again this year, and <a href="https://s2021.siggraph.org/register/#reg-level-comparison">Basic Attendee</a> registration for the conference is required at a cost of $50.
-  </p>
-  
-  <p>
-    <strong>31st July 2021</strong> - Updates to CY2022 Draft for MKL, OpenEXR, and OpenVDB.
-  </p>
-  
-  <p>
-    <strong>22nd May 2021</strong> - Minor updates to CY2022 Draft for Ptex, with additional notes for ACES and macOS.
-  </p>
-  
-  <p>
-    <strong>16th May 2021</strong> - CY2022 Draft published. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/g/vfx-platform-discuss">vfx-platform-discuss</a>.
-  </p>
-  
-  <p>
-    <strong>22nd March 2021</strong> - CY2021 has been updated to revert OpenEXR from 3.0.x back to 2.4.x due to a late release of OpenEXR 3 meaning that software vendors continued to ship products using 2.4. A change in policy to only allow released versions to be included in each year’s VFX Reference Platform should prevent this from happening again in future. Also, FBX has been reverted to 2020.x due to there being no 2021.x released in time for CY2021.
-  </p>
-  
-  <p>
-    <strong>12th September 2020</strong> - CY2021 is now Final. Further changes are not anticipated unless a major issue is discovered and the community supports a late change.
-  </p>
-  
-  <p>
-    <strong>20th August 2020</strong> - From CY2021 the VFX Reference Platform will support Windows and macOS in addition to Linux. Details added below, and feedback welcome. CY2021 will be finalized within the next 4 weeks.
-  </p>
-  
-  <p>
-    <strong>17th July 2020</strong> - Added gcc notes to CY2021 Draft with details on Redhat Developer Toolset and clang compatibility.
-  </p>
-  
-  <p>
-    <strong>16th June 2020</strong> - CY2021 Draft published. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/forum/#!forum/vfx-platform-discuss">vfx-platform-discuss</a>.
-  </p>
-  
-  <p>
-    <strong>7th March 2020</strong> - CY2020 updated - Added required patch for Qt for Python (PySide) and an alternative option of using 5.13.
-  </p>
-  
-  <p>
-    <strong>2nd November 2019</strong> - Late change approved to CY2020 - OpenEXR updated to 2.4.x.
-  </p>
-  
-  <p>
-    <strong>19th October 2019</strong> - Late change to CY2020 under review to accommodate an updated OpenEXR release. Proposed change is limited to OpenEXR moving to 2.4.x. Please <a href="mailto:feedback@vfxplatform.com">send feedback on this change</a> by 31st October.
-  </p>
-  
-  <p>
-    <strong>3rd August 2019</strong> - The CY2020 Platform is now Final with no further changes planned.
-  </p>
-  
-  <p>
-    <strong>1st May 2019</strong> - CY2020 Draft published which includes the long-awaited move to Python 3. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/forum/#!forum/vfx-platform-discuss">vfx-platform-discuss</a>. Software vendors are encouraged to provide a Python 3 tech preview release this year to help studios with testing during migration efforts.
-  </p>
-  
-  <p>
-    <strong>12th September 2018</strong> - CY2019 Final now published with OpenVDB updated to 6.x and ACES to 1.1 to reflect recent or imminent major releases of these important industry packages.
-  </p>
-  
-  <p>
-    <strong>22nd July 2018</strong> - CY2019 Draft updated - OpenEXR upped to 2.3.x.
-  </p>
-  
-  <p>
-    <strong>22nd July 2018</strong> - CY2019 Draft updated - minimum version of Python is now 2.7.9 to ensure support of PIP via PyPI.
-  </p>
-  
-  <p>
-    <strong>20th May 2018</strong> - CY2019 Draft published. The move to Python 3 has been pushed to CY2020 due to the need to focus on upgrading to the latest Qt Long Term Support release. Software vendors are requested to provide a Python 3 tech preview release in 2019 to help studios with testing during migration efforts. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/forum/#!forum/vfx-platform-discuss">vfx-platform-discuss</a>.
-  </p>
-  
-  <p>
-    <strong>26th November 2017</strong> - CY2018 has had a late change to the compiler version which is now gcc 6.3.1. This successfully resolves issues that were discovered with gcc 5.3.1.
-  </p>
-  
-  <p>
-    <strong>28th August 2017</strong> - Added a note for gcc 5 and updated the Qt note to include a link to the qtdeclarative modifications.
-  </p>
-  
-  <p>
-    <strong>3rd August 2017</strong> - The CY2018 Platform was ratified as Final at the annual SIGGRAPH VFX Reference Platform Birds of a Feather with no further planned changes.
-  </p>
-  
-  <p>
-    <strong>2nd July 2017</strong> - Minor updates to CY2018 Draft for Qt and ACES.
-  </p>
-  
-  <p>
-    <strong>29th April 2017</strong> - CY2018 Draft published with significant upgrades to gcc and glibc. This also comes with notice of our intention to move to Python 3 for CY2019 in advance of Python 2 support ending in 2020. We are currently soliciting feedback on this Draft so please either send to <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a> or share on <a href="https://groups.google.com/forum/#!forum/vfx-platform-discuss">vfx-platform-discuss</a>. We expect to publish CY2018 Final around SIGGRAPH in July.
-  </p>
-  
-  <p>
-    <strong>1st August 2016</strong> - CY2017 Final now published with OpenSubdiv and OpenVDB being updated in addition to Boost, Ptex, Alembic and TBB as result of feedback to the Draft.
-  </p>
-  
-  <p>
-    <strong>28th June 2016</strong> - The VFX Reference Platform Qt modifications to the Qt 5.6.1 release are now available from these forks of <a href="https://github.com/autodesk-forks/qtbase/tree/adsk-contrib/vfx/5.6.1">qtbase</a> and <a href="https://github.com/autodesk-forks/qtx11extras/tree/adsk-contrib/vfx/5.6.1">qtx11extras</a>.
-  </p>
-  
-  <p>
-    <strong>20th June 2016</strong> - CY2017 Draft published for comment from the community. The theme for CY2017 is to minimize code changes in the year following the transition to Qt 5.
-  </p>
-  
-  <p>
-    <strong>27th October 2015</strong> - A late change has been proposed to CY2016 to move from Qt 5.5.x to Qt 5.6.x due to that version now being targeted as a Long Term Support release. Please <a href="http://bit.ly/CY2016Qt5">see here</a> for further details.
-  </p>
-  
-</div>
-
-
+</section>
 
 
 
