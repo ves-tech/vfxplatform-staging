@@ -67,7 +67,7 @@
   <div class="container mx-auto px-4 max-w-6xl">
     <div class="flex items-center justify-between h-16">
       <a href="/vfxplatform-staging/" class="flex items-center gap-2 text-gray-900 dark:text-white font-semibold text-lg hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-        <img src="/vfxplatform-staging/assets/images/logo_optimized.svg" alt="VFX Reference Platform" style="height: 2.5rem; width: auto;" class="flex-shrink-0">
+        <img src="/vfxplatform-staging/assets/images/logo_optimized.svg" alt="VFX Reference Platform" class="h-10 w-auto flex-shrink-0">
         <span>VFX Reference Platform</span>
       </a>
 
@@ -173,7 +173,7 @@
 <script>
   document.getElementById('mobile-menu-btn').addEventListener('click', function() {
     document.getElementById('mobile-menu').classList.toggle('hidden');
-    var expanded = this.getAttribute('aria-expanded') === 'true';
+    const expanded = this.getAttribute('aria-expanded') === 'true';
     this.setAttribute('aria-expanded', !expanded);
   });
 </script>
@@ -236,7 +236,7 @@
 </section>
 
 <!-- All Platforms -->
-<section class="container mx-auto px-4 max-w-6xl pt-4 pb-12">
+<section class="container mx-auto px-4 max-w-6xl py-12">
   <div class="section-heading">
     <h2>All Platforms</h2>
   </div>
@@ -6311,11 +6311,14 @@ sudo yum -y install devtoolset-6
       <!-- About column -->
       <div>
         <a href="/vfxplatform-staging/" class="flex items-center gap-2 text-white font-semibold text-lg mb-3">
-          <img src="/vfxplatform-staging/assets/images/logo_optimized.svg" alt="VFX Reference Platform" style="height: 2.25rem; width: auto;" class="flex-shrink-0">
+          <img src="/vfxplatform-staging/assets/images/logo_optimized.svg" alt="VFX Reference Platform" class="h-9 w-auto flex-shrink-0">
           <span>VFX Reference Platform</span>
         </a>
-        <p class="text-sm text-gray-400 leading-relaxed">
+        <p class="text-sm text-gray-400 leading-relaxed mb-2">
           A standardized set of tool and library versions to minimize incompatibilities between software packages in the VFX industry.
+        </p>
+        <p class="text-sm text-gray-400 leading-relaxed">
+          Updated annually in collaboration with the <a href='https://vesglobal.org/technology-committee-activities/' class='text-blue-400 hover:text-blue-300 hover:underline'>Visual Effects Society Technology Committee</a>.
         </p>
       </div>
 
@@ -6366,15 +6369,20 @@ sudo yum -y install devtoolset-6
           </a>
         </p>
         <p class="text-sm text-gray-400 mb-2">
+          <a href="https://groups.google.com/g/vfx-platform-discuss" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            vfx-platform-discuss
+          </a>
+        </p>
+        <p class="text-sm text-gray-400 mb-2">
           <a href="https://academysoftwarefdn.slack.com/archives/C017TA11X2S" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
             <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
               <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zm10.124 2.521a2.528 2.528 0 0 1 2.52-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.52V8.834zm-1.271 0a2.528 2.528 0 0 1-2.521 2.521 2.528 2.528 0 0 1-2.521-2.521V2.522A2.528 2.528 0 0 1 15.165 0a2.528 2.528 0 0 1 2.522 2.522v6.312zm-2.522 10.124a2.528 2.528 0 0 1 2.522 2.52A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.521-2.522v-2.52h2.521zm0-1.271a2.527 2.527 0 0 1-2.521-2.521 2.528 2.528 0 0 1 2.521-2.522h6.313A2.528 2.528 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.522h-6.313z"/>
             </svg>
             #vfx_reference_platform
           </a>
-        </p>
-        <p class="text-sm text-gray-400">
-          Updated annually in collaboration with the Visual Effects Society Technology Committee.
         </p>
       </div>
     </div>
