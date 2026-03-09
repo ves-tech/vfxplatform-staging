@@ -237,13 +237,5176 @@
 
 <!-- All Platforms -->
 <section class="container mx-auto px-4 max-w-6xl py-12">
-  <div class="section-heading">
-    <h2>All Platforms</h2>
+  <div class="flex items-center gap-4 mb-8">
+    <span class="flex-1 h-px bg-gray-200 dark:bg-gray-700"></span>
+    <h2 class="text-2xl font-semibold whitespace-nowrap">All Platforms</h2>
+    <span class="flex-1 h-px bg-gray-200 dark:bg-gray-700"></span>
+    <div class="flex rounded-lg border border-gray-300 dark:border-gray-600 overflow-hidden text-sm">
+      <button id="view-table" class="view-toggle-btn flex items-center gap-1.5 px-3 py-1.5 transition-colors" aria-label="Table view">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18M3 6h18M3 18h18"/></svg>
+        Table
+      </button>
+      <button id="view-cards" class="view-toggle-btn flex items-center gap-1.5 px-3 py-1.5 border-l border-gray-300 dark:border-gray-600 transition-colors" aria-label="Card view">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"/></svg>
+        Cards
+      </button>
+    </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div id="table-view">
     
+
+
+
+<div class="platform-table-wrapper">
+  <div class="overflow-x-auto">
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th scope="col">Component</th>
+          
+          
+          
+          <th scope="col">
+            CY2026
+            
+          </th>
+          
+          
+          
+          <th scope="col">
+            CY2025
+            
+          </th>
+          
+          
+          
+          <th scope="col">
+            CY2024
+            
+          </th>
+          
+          
+          
+          <th scope="col">
+            CY2023
+            
+          </th>
+          
+          
+          
+          <th scope="col">
+            CY2022
+            
+          </th>
+          
+          
+          
+          <th scope="col">
+            CY2021
+            
+          </th>
+          
+          
+          
+          <th scope="col">
+            CY2020
+            
+          </th>
+          
+          
+          
+          <th scope="col">
+            CY2019
+            
+          </th>
+          
+          
+          
+          <th scope="col">
+            CY2018
+            
+          </th>
+          
+          
+          
+          <th scope="col">
+            CY2017
+            
+          </th>
+          
+          
+          
+          <th scope="col">
+            CY2016
+            
+          </th>
+          
+          
+          
+          <th scope="col">
+            CY2015
+            
+          </th>
+          
+          
+          
+          <th scope="col">
+            CY2014
+            
+          </th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        
+          <!-- Category header row -->
+          <tr class="category-header" data-category="linux" role="button" tabindex="0" aria-expanded="true">
+            <td colspan="14">
+              <span class="category-chevron">&#9662;</span>
+              Linux
+            </td>
+          </tr>
+
+          
+            <tr data-category-row="linux">
+              <td class="font-semibold whitespace-nowrap">
+                gcc
+                
+                  <span class="text-xs text-gray-500 dark:text-gray-400" title="Minimum/Maximum version semantics apply">&#8595;&#8593;</span>
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">14.2</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">11.2.1</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(New libstdc++ ABI)</small>
+                    
+                    
+                      <br><small><a href="#footnote-gcc9" data-note-id="footnote-gcc9" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">11.2.1</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(New libstdc++ ABI)</small>
+                    
+                    
+                      <br><small><a href="#footnote-gcc9" data-note-id="footnote-gcc9" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">11.2.1</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Switch to new libstdc++ ABI)</small>
+                    
+                    
+                      <br><small><a href="#footnote-gcc9" data-note-id="footnote-gcc9" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">9.3.1</span>
+                    
+                    
+                      <br><small><a href="#footnote-gcc9" data-note-id="footnote-gcc9" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">9.3.1</span>
+                    
+                    
+                      <br><small><a href="#footnote-gcc9" data-note-id="footnote-gcc9" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">6.3.1</span>
+                    
+                    
+                      <br><small><a href="#footnote-gcc6" data-note-id="footnote-gcc6" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">6.3.1</span>
+                    
+                    
+                      <br><small><a href="#footnote-gcc6" data-note-id="footnote-gcc6" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">6.3.1</span>
+                    
+                    
+                      <br><small><a href="#footnote-gcc6" data-note-id="footnote-gcc6" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">6.3.1</span>
+                    
+                    
+                      <br><small><a href="#footnote-gcc6" data-note-id="footnote-gcc6" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">4.8.2 with bugfix or 4.8.3</span>
+                    
+                    
+                      <br><small><a href="#footnote-gcc" data-note-id="footnote-gcc" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">4.8.2 with bugfix or 4.8.3</span>
+                    
+                    
+                      <br><small><a href="#footnote-gcc" data-note-id="footnote-gcc" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">4.1.2</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="linux" class="row-alt">
+              <td class="font-semibold whitespace-nowrap">
+                glibc
+                
+                  <span class="text-xs text-gray-500 dark:text-gray-400" title="Minimum/Maximum version semantics apply">&#8595;&#8593;</span>
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.28</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.28</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.28</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.28</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.17</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.17</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.17</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.17</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.17</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.12</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.12</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.12</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+            </tr>
+          
+        
+          <!-- Category header row -->
+          <tr class="category-header" data-category="macos" role="button" tabindex="0" aria-expanded="true">
+            <td colspan="14">
+              <span class="category-chevron">&#9662;</span>
+              macOS
+            </td>
+          </tr>
+
+          
+            <tr data-category-row="macos">
+              <td class="font-semibold whitespace-nowrap">
+                Minimum Deployment Target
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">14.0</span>
+                    
+                    
+                      <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">12.0</span>
+                    
+                    
+                      <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">11.0</span>
+                    
+                    
+                      <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">11.0</span>
+                    
+                    
+                      <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">10.15</span>
+                    
+                    
+                      <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">10.13</span>
+                    
+                    
+                      <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+            </tr>
+          
+        
+          <!-- Category header row -->
+          <tr class="category-header" data-category="windows" role="button" tabindex="0" aria-expanded="true">
+            <td colspan="14">
+              <span class="category-chevron">&#9662;</span>
+              Windows
+            </td>
+          </tr>
+
+          
+            <tr data-category-row="windows">
+              <td class="font-semibold whitespace-nowrap">
+                Minimum Platform Toolset
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">Visual Studio 2022 v17.6 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">Visual Studio 2022 v17.6 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">Visual Studio 2022 v17.4 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">Visual Studio 2022</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">Visual Studio 2019 v16.9 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">Visual Studio 2017</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="windows" class="row-alt">
+              <td class="font-semibold whitespace-nowrap">
+                Windows SDK
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">10.0.22621 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">10.0.20348 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">10.0.20348 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">10.0.19041 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">10.0.19041 or later</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">v10</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+            </tr>
+          
+        
+          <!-- Category header row -->
+          <tr class="category-header" data-category="components" role="button" tabindex="0" aria-expanded="true">
+            <td colspan="14">
+              <span class="category-chevron">&#9662;</span>
+              Common Components
+            </td>
+          </tr>
+
+          
+            <tr data-category-row="components">
+              <td class="font-semibold whitespace-nowrap">
+                C++ API/SDK
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">C++20</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">C++17</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">C++17</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">C++17</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">C++17</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">C++17</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">C++14</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">C++14</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">C++14</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">C++11</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">C++11</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components" class="row-alt">
+              <td class="font-semibold whitespace-nowrap">
+                Python
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.13.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.11.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.11.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.10.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.9.1 - 3.9.latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.7.x</span>
+                    
+                    
+                      <br><small><a href="#footnote-python3" data-note-id="footnote-python3" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.7.x</span>
+                    
+                    
+                      <br><small><a href="#footnote-python3" data-note-id="footnote-python3" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.7.9 - 2.7.latest</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Python 3 tech preview release)</small>
+                    
+                    
+                      <br><small><a href="#footnote-python3" data-note-id="footnote-python3" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.7.5 - 2.7.latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.7.5 - 2.7.latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.7.5 - 2.7.latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.7.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.7.3</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components">
+              <td class="font-semibold whitespace-nowrap">
+                PyQt
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">6.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">6.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">6.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.15</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.15</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">5.15</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.12</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">5.12</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.6</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.6</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.6</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components" class="row-alt">
+              <td class="font-semibold whitespace-nowrap">
+                Qt for Python (PySide)
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">6.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">6.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">6.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.15</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.15</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">5.15</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">5.12 (with patch) or 5.13</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">5.12</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.0.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.0.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.0</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.2.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.2</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components">
+              <td class="font-semibold whitespace-nowrap">
+                Qt
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">6.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">6.5.x</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(6.8 planned for CY2026)</small>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">6.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.15.x</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(6.5 planned for CY2024)</small>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.15.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">5.15.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.12.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">5.12.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">5.6.1 - 5.6.latest (modified)</span>
+                    
+                    
+                      <br><small><a href="#footnote-qt" data-note-id="footnote-qt" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">5.6.1 (modified)</span>
+                    
+                    
+                      <br><small><a href="#footnote-qt" data-note-id="footnote-qt" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">5.6.1 (modified)</span>
+                    
+                    
+                      <br><small><a href="#footnote-qt" data-note-id="footnote-qt" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">4.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">4.8.5</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components" class="row-alt">
+              <td class="font-semibold whitespace-nowrap">
+                ACES
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.0</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.0</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.3</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.3</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.3</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.2</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.1</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.1</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.0.3 - 1.0.latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.0.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.0</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components">
+              <td class="font-semibold whitespace-nowrap">
+                Alembic
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.7.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.7.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.7.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.7.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.6.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.5.8</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components" class="row-alt">
+              <td class="font-semibold whitespace-nowrap">
+                Boost
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.88</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.85</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.82</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.80</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.76</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.73</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.70</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.66</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.61</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.61</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.55</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.55</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.53</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components">
+              <td class="font-semibold whitespace-nowrap">
+                FBX
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020.2 - 2020.latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020.2 - 2020.latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020.2 - 2020.latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2020.2 - 2020.latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2020.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2019.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2018.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">latest</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2015</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components" class="row-alt">
+              <td class="font-semibold whitespace-nowrap">
+                Imath
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.2.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.1.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.1.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.1.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.1.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.0.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components">
+              <td class="font-semibold whitespace-nowrap">
+                NumPy
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.3.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.26.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.24.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.23.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.20.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.19.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.17.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.14.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.12.1</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.9.2</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.9.2</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components" class="row-alt">
+              <td class="font-semibold whitespace-nowrap">
+                oneMKL/MKL
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2025</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2024</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Move to oneMKL)</small>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Move to oneMKL deferred to CY2025)</small>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Plan to move to oneMKL in CY2024)</small>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2020</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2019</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2018</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2017 Update 2</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">11.3</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">11.3</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components">
+              <td class="font-semibold whitespace-nowrap">
+                oneTBB/TBB
+                
+                  <span class="text-xs text-gray-500 dark:text-gray-400" title="Minimum/Maximum version semantics apply">&#8595;&#8593;</span>
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2022.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2021.x</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Move to oneTBB)</small>
+                    
+                    
+                      <br><small><a href="#footnote-tbb" data-note-id="footnote-tbb" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020 Update 3</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Move to oneTBB deferred to CY2025)</small>
+                    
+                    
+                      <br><small><a href="#footnote-tbb" data-note-id="footnote-tbb" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2020 Update 3</span>
+                    
+                      <br><small class="text-gray-500 dark:text-gray-400">(Plan to move to oneTBB in CY2024)</small>
+                    
+                    
+                      <br><small><a href="#footnote-tbb" data-note-id="footnote-tbb" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2020 Update 3</span>
+                    
+                    
+                      <br><small><a href="#footnote-tbb" data-note-id="footnote-tbb" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2020 Update 2</span>
+                    
+                    
+                      <br><small><a href="#footnote-tbb" data-note-id="footnote-tbb" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2019 Update 6</span>
+                    
+                    
+                      <br><small><a href="#footnote-tbb" data-note-id="footnote-tbb" class="text-blue-600 dark:text-blue-400 hover:underline">(see notes)</a></small>
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2018</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2017 Update 6</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">4.4</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">4.3</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">4.2</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">4.1</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components" class="row-alt">
+              <td class="font-semibold whitespace-nowrap">
+                OpenColorIO
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.3.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.2.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.1.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.0.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.1.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.1.0</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.0.9</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.0.9</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.0.9</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">1.0.9</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">1.0.7</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components">
+              <td class="font-semibold whitespace-nowrap">
+                OpenEXR
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.3.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.2.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.1.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.1.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.0.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.3.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.2.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.2.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.2.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.2.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.0.1</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components" class="row-alt">
+              <td class="font-semibold whitespace-nowrap">
+                OpenSubdiv
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.7.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.6.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.6.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.3.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.3.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.1.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.0.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.3.3</span>
+                    
+                    
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components">
+              <td class="font-semibold whitespace-nowrap">
+                OpenVDB
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">13.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">12.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">11.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">10.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">9.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">8.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">7.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">6.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">5.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">3.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">3.0.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+            </tr>
+          
+            <tr data-category-row="components" class="row-alt">
+              <td class="font-semibold whitespace-nowrap">
+                Ptex
+                
+              </td>
+
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.4.x</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.3.2</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.3.2</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.1.33</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.1.28</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm version-changed">
+                  
+                    <span class="font-mono">2.1.28</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="font-mono">2.0.42</span>
+                    
+                    
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+                
+                
+
+                
+
+                
+                
+
+                <td class="text-sm">
+                  
+                    <span class="text-gray-400">&mdash;</span>
+                  
+                </td>
+              
+            </tr>
+          
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+  </div>
+
+  <div id="card-view" class="hidden">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       
+        
 
 
 
@@ -695,8 +5858,8 @@
   </div>
 </div>
 
-    
       
+        
 
 
 
@@ -1160,8 +6323,8 @@
   </div>
 </div>
 
-    
       
+        
 
 
 
@@ -1623,8 +6786,8 @@
   </div>
 </div>
 
-    
       
+        
 
 
 
@@ -2088,8 +7251,8 @@
   </div>
 </div>
 
-    
       
+        
 
 
 
@@ -2545,8 +7708,8 @@
   </div>
 </div>
 
-    
       
+        
 
 
 
@@ -3004,8 +8167,8 @@
   </div>
 </div>
 
-    
       
+        
 
 
 
@@ -3383,8 +8546,8 @@
   </div>
 </div>
 
-    
       
+        
 
 
 
@@ -3762,8 +8925,8 @@
   </div>
 </div>
 
-    
       
+        
 
 
 
@@ -4139,8 +9302,8 @@
   </div>
 </div>
 
-    
       
+        
 
 
 
@@ -4516,8 +9679,8 @@
   </div>
 </div>
 
-    
       
+        
 
 
 
@@ -4893,8 +10056,8 @@
   </div>
 </div>
 
-    
       
+        
 
 
 
@@ -5196,8 +10359,8 @@
   </div>
 </div>
 
-    
       
+        
 
 
 
@@ -5471,7 +10634,8 @@
   </div>
 </div>
 
-    
+      
+    </div>
   </div>
 </section>
 
@@ -6302,6 +11466,8 @@ sudo yum -y install devtoolset-6
   </template>
 
 
+
+<script src="/vfxplatform-staging/assets/js/history-view-toggle.js"></script>
 
   </main>
 
