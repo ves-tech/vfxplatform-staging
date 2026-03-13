@@ -38,7 +38,10 @@
   "name": "VFX Reference Platform",
   "url": "https://vfxplatform.com",
   "description": "Reference Platform for VFX Software",
-  "sameAs": []
+  "sameAs": [
+    "https://groups.google.com/g/vfx-platform-discuss",
+    "https://academysoftwarefdn.slack.com/archives/C017TA11X2S"
+  ]
 }
 </script>
 
@@ -63,6 +66,7 @@
 
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased min-h-screen flex flex-col">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:text-sm focus:font-medium">Skip to content</a>
   <nav class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
   <div class="container mx-auto px-4 max-w-6xl">
     <div class="flex items-center justify-between h-16">
@@ -72,8 +76,8 @@
       </a>
 
       <!-- Mobile menu button -->
-      <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
@@ -113,13 +117,12 @@
         
 
         <button
-  id="dark-mode-toggle"
   type="button"
-  class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 transition-colors"
+  class="dark-mode-toggle p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 transition-colors"
   aria-label="Toggle dark mode"
 >
-  <svg id="dark-mode-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path id="moon-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+  <svg class="dark-mode-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path class="moon-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
   </svg>
 </button>
 
@@ -127,7 +130,7 @@
     </div>
 
     <!-- Mobile navigation -->
-    <div id="mobile-menu" class="hidden md:hidden pb-4">
+    <div id="mobile-menu" class="md:hidden pb-4 overflow-hidden transition-all duration-200 ease-out" style="max-height: 0; opacity: 0;">
       
       <a href="/vfxplatform-staging/" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">
         Home
@@ -155,13 +158,12 @@
       
       <div class="px-3 py-2">
         <button
-  id="dark-mode-toggle"
   type="button"
-  class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 transition-colors"
+  class="dark-mode-toggle p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 transition-colors"
   aria-label="Toggle dark mode"
 >
-  <svg id="dark-mode-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path id="moon-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+  <svg class="dark-mode-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path class="moon-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
   </svg>
 </button>
 
@@ -171,15 +173,38 @@
 </nav>
 
 <script>
-  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-    const expanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', !expanded);
-  });
+  (function() {
+    var btn = document.getElementById('mobile-menu-btn');
+    var menu = document.getElementById('mobile-menu');
+    var isOpen = false;
+
+    function openMenu() {
+      isOpen = true;
+      btn.setAttribute('aria-expanded', 'true');
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      menu.style.opacity = '1';
+    }
+
+    function closeMenu() {
+      if (!isOpen) return;
+      isOpen = false;
+      btn.setAttribute('aria-expanded', 'false');
+      menu.style.maxHeight = '0';
+      menu.style.opacity = '0';
+    }
+
+    btn.addEventListener('click', function() {
+      isOpen ? closeMenu() : openMenu();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+  })();
 </script>
 
 
-  <main class="flex-1">
+  <main id="main-content" class="flex-1">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -331,320 +356,348 @@
   
   <div class="accordion-item">
     <button
+      id="faq-btn-1"
       class="accordion-header rounded-t-lg rounded-b-lg"
       aria-expanded="false"
       aria-controls="faq-panel-1"
-      onclick="this.parentElement.classList.toggle('open'); this.nextElementSibling.classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     >
       <span class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         As a VFX artist, what does the VFX Reference Platform mean to me?
       </span>
-      <svg class="w-5 h-5 transform transition-transform accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
-    <div id="faq-panel-1" class="accordion-content hidden">
-      <p>Building software products for a common platform means they are easier to install and integrate into pipelines so may result in quicker adoption of new software releases at your studio. It has also made it easier for the industry to adopt new technologies more rapidly.</p>
+    <div id="faq-panel-1" class="accordion-panel" role="region" aria-labelledby="faq-btn-1">
+      <div class="accordion-content">
+        <p>Building software products for a common platform means they are easier to install and integrate into pipelines so may result in quicker adoption of new software releases at your studio. It has also made it easier for the industry to adopt new technologies more rapidly.</p>
 
 <p>We also hope that by making it simpler for vendors to support Linux we will see more applications available on Linux in the future.</p>
 
+      </div>
     </div>
   </div>
   
   <div class="accordion-item">
     <button
+      id="faq-btn-2"
       class="accordion-header rounded-t-lg rounded-b-lg"
       aria-expanded="false"
       aria-controls="faq-panel-2"
-      onclick="this.parentElement.classList.toggle('open'); this.nextElementSibling.classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     >
       <span class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         Does the inclusion of a particular tool or library represent its endorsement by the VES?
       </span>
-      <svg class="w-5 h-5 transform transition-transform accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
-    <div id="faq-panel-2" class="accordion-content hidden">
-      <p>No, neither the VES nor the VFX Reference Platform working group endorse or promote any specific software packages for use in the creation of visual effects. The decision to include a particular library or tool in the Platform is based primarily on whether using differing versions introduces compatibility issues.</p>
+    <div id="faq-panel-2" class="accordion-panel" role="region" aria-labelledby="faq-btn-2">
+      <div class="accordion-content">
+        <p>No, neither the VES nor the VFX Reference Platform working group endorse or promote any specific software packages for use in the creation of visual effects. The decision to include a particular library or tool in the Platform is based primarily on whether using differing versions introduces compatibility issues.</p>
 
 <p>There are plenty of excellent libraries and tools in common use throughout the VFX industry that are not included in the Platform because they do not present version compatibility issues.</p>
 
+      </div>
     </div>
   </div>
   
   <div class="accordion-item">
     <button
+      id="faq-btn-3"
       class="accordion-header rounded-t-lg rounded-b-lg"
       aria-expanded="false"
       aria-controls="faq-panel-3"
-      onclick="this.parentElement.classList.toggle('open'); this.nextElementSibling.classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     >
       <span class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         What Linux distribution do you recommend?
       </span>
-      <svg class="w-5 h-5 transform transition-transform accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
-    <div id="faq-panel-3" class="accordion-content hidden">
-      <p>As of 2022, studios are strongly recommended to adopt Red Hat Enterprise Linux or one of its freely available compatible downstream distributions such as AlmaLinux or Rocky Linux. For more details on this recommendation, please refer to the <a href="https://bit.ly/VFXlinux22">VFX Linux Distribution Recommendation Report (pdf)</a>.</p>
+    <div id="faq-panel-3" class="accordion-panel" role="region" aria-labelledby="faq-btn-3">
+      <div class="accordion-content">
+        <p>As of 2022, studios are strongly recommended to adopt Red Hat Enterprise Linux or one of its freely available compatible downstream distributions such as AlmaLinux or Rocky Linux. For more details on this recommendation, please refer to the <a href="https://bit.ly/VFXlinux22">VFX Linux Distribution Recommendation Report (pdf)</a>.</p>
 
 <p>For more general information about the use of Linux in VFX and Animation studios, please see the <a href="/linux/">Linux page</a> on this site.</p>
 
+      </div>
     </div>
   </div>
   
   <div class="accordion-item">
     <button
+      id="faq-btn-4"
       class="accordion-header rounded-t-lg rounded-b-lg"
       aria-expanded="false"
       aria-controls="faq-panel-4"
-      onclick="this.parentElement.classList.toggle('open'); this.nextElementSibling.classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     >
       <span class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         Is there a VFX Reference Platform-certified Linux distribution that I can download and install?
       </span>
-      <svg class="w-5 h-5 transform transition-transform accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
-    <div id="faq-panel-4" class="accordion-content hidden">
-      <p>There is no VFX Reference Platform-certified Linux distro available today, so it is currently up to VFX and animation studios to take the recommended Linux distribution and upgrade/install the relevant platform versions.</p>
+    <div id="faq-panel-4" class="accordion-panel" role="region" aria-labelledby="faq-btn-4">
+      <div class="accordion-content">
+        <p>There is no VFX Reference Platform-certified Linux distro available today, so it is currently up to VFX and animation studios to take the recommended Linux distribution and upgrade/install the relevant platform versions.</p>
 
+      </div>
     </div>
   </div>
   
   <div class="accordion-item">
     <button
+      id="faq-btn-5"
       class="accordion-header rounded-t-lg rounded-b-lg"
       aria-expanded="false"
       aria-controls="faq-panel-5"
-      onclick="this.parentElement.classList.toggle('open'); this.nextElementSibling.classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     >
       <span class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         Is the Visual Effects Society going to create a Linux distro?
       </span>
-      <svg class="w-5 h-5 transform transition-transform accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
-    <div id="faq-panel-5" class="accordion-content hidden">
-      <p>No. Creating and maintaining a Linux distribution is an enormous task, and it would be challenging for a single distro to be universally adopted across the industry. The VFX Reference Platform effort is focused on relieving the pain of multiple incompatible versions of libraries across different software products.</p>
+    <div id="faq-panel-5" class="accordion-panel" role="region" aria-labelledby="faq-btn-5">
+      <div class="accordion-content">
+        <p>No. Creating and maintaining a Linux distribution is an enormous task, and it would be challenging for a single distro to be universally adopted across the industry. The VFX Reference Platform effort is focused on relieving the pain of multiple incompatible versions of libraries across different software products.</p>
 
+      </div>
     </div>
   </div>
   
   <div class="accordion-item">
     <button
+      id="faq-btn-6"
       class="accordion-header rounded-t-lg rounded-b-lg"
       aria-expanded="false"
       aria-controls="faq-panel-6"
-      onclick="this.parentElement.classList.toggle('open'); this.nextElementSibling.classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     >
       <span class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         What is the significance of the glibc version to which Linux distro releases are not supported?
       </span>
-      <svg class="w-5 h-5 transform transition-transform accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
-    <div id="faq-panel-6" class="accordion-content hidden">
-      <p>The glibc specified in the VFX Reference Platform is the minimum version of the GNU C library that the platform will work with. Generally speaking, glibc is not upgradeable on a given Linux distro release so if your distro has a glibc version earlier than that specified in the VFX Reference Platform then it will not be supported.</p>
+    <div id="faq-panel-6" class="accordion-panel" role="region" aria-labelledby="faq-btn-6">
+      <div class="accordion-content">
+        <p>The glibc specified in the VFX Reference Platform is the minimum version of the GNU C library that the platform will work with. Generally speaking, glibc is not upgradeable on a given Linux distro release so if your distro has a glibc version earlier than that specified in the VFX Reference Platform then it will not be supported.</p>
 
 <p>For example, for CY2015 the minimum glibc was set to 2.12 which meant that releases earlier than CentOS 6.0 or Ubuntu 12.04, just to take those distributions as an example, were not supported by CY2015 because they shipped with an older version of glibc.</p>
 
+      </div>
     </div>
   </div>
   
   <div class="accordion-item">
     <button
+      id="faq-btn-7"
       class="accordion-header rounded-t-lg rounded-b-lg"
       aria-expanded="false"
       aria-controls="faq-panel-7"
-      onclick="this.parentElement.classList.toggle('open'); this.nextElementSibling.classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     >
       <span class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         Which software vendors are currently involved?
       </span>
-      <svg class="w-5 h-5 transform transition-transform accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
-    <div id="faq-panel-7" class="accordion-content hidden">
-      <p>The VFX Reference Platform is a collaborative project. So far, we have the enthusiastic support of all of the major application providers for the visual effects and animation industry, including Autodesk, Foundry and Side Effects Software.</p>
+    <div id="faq-panel-7" class="accordion-panel" role="region" aria-labelledby="faq-btn-7">
+      <div class="accordion-content">
+        <p>The VFX Reference Platform is a collaborative project. So far, we have the enthusiastic support of all of the major application providers for the visual effects and animation industry, including Autodesk, Foundry and Side Effects Software.</p>
 
 <p>There are two ways to participate: First, any interested person or company may join the discussion at <a href="mailto:vfx-platform-discuss@googlegroups.com">vfx-platform-discuss@googlegroups.com</a>. Second, we have formed a Working Group who hold regular conference calls to ensure progress is made in complicated areas. The Working Group is made up of interested parties invited by the VES Technology Committee and currently has several members, one representative from the VES and one each from several software vendors.</p>
 
+      </div>
     </div>
   </div>
   
   <div class="accordion-item">
     <button
+      id="faq-btn-8"
       class="accordion-header rounded-t-lg rounded-b-lg"
       aria-expanded="false"
       aria-controls="faq-panel-8"
-      onclick="this.parentElement.classList.toggle('open'); this.nextElementSibling.classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     >
       <span class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         I'm a software developer, how do I get my software certified?
       </span>
-      <svg class="w-5 h-5 transform transition-transform accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
-    <div id="faq-panel-8" class="accordion-content hidden">
-      <p>There is no certification program, but you are encouraged to advertise the fact that your software is compliant with a specific iteration of the VFX Reference Platform and link to this website.</p>
+    <div id="faq-panel-8" class="accordion-panel" role="region" aria-labelledby="faq-btn-8">
+      <div class="accordion-content">
+        <p>There is no certification program, but you are encouraged to advertise the fact that your software is compliant with a specific iteration of the VFX Reference Platform and link to this website.</p>
 
+      </div>
     </div>
   </div>
   
   <div class="accordion-item">
     <button
+      id="faq-btn-9"
       class="accordion-header rounded-t-lg rounded-b-lg"
       aria-expanded="false"
       aria-controls="faq-panel-9"
-      onclick="this.parentElement.classList.toggle('open'); this.nextElementSibling.classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     >
       <span class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         My application provider doesn't currently support the VFX Reference Platform, what should I do?
       </span>
-      <svg class="w-5 h-5 transform transition-transform accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
-    <div id="faq-panel-9" class="accordion-content hidden">
-      <p>First, please help ensure your application provider is aware of the VFX Reference Platform and the goal of making it easier to develop for Linux. Asking them to support the VFX Reference Platform as a priority for their development is a great idea for everyone.</p>
+    <div id="faq-panel-9" class="accordion-panel" role="region" aria-labelledby="faq-btn-9">
+      <div class="accordion-content">
+        <p>First, please help ensure your application provider is aware of the VFX Reference Platform and the goal of making it easier to develop for Linux. Asking them to support the VFX Reference Platform as a priority for their development is a great idea for everyone.</p>
 
 <p>Second, users should be aware that some developers will have technical challenges changing software to conform to the version requirements in the VFX Reference Platform. Even companies who enthusiastically support the effort may take a few releases to be compliant with the platform.</p>
 
+      </div>
     </div>
   </div>
   
   <div class="accordion-item">
     <button
+      id="faq-btn-10"
       class="accordion-header rounded-t-lg rounded-b-lg"
       aria-expanded="false"
       aria-controls="faq-panel-10"
-      onclick="this.parentElement.classList.toggle('open'); this.nextElementSibling.classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     >
       <span class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         Why the initial focus on Linux, what about other operating systems?
       </span>
-      <svg class="w-5 h-5 transform transition-transform accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
-    <div id="faq-panel-10" class="accordion-content hidden">
-      <p>Linux is prevalent in VFX, particularly in the larger studios where they build sophisticated automation pipelines that integrate multiple different software vendors’ products together. These Linux-based pipelines are where the problem of conflicting versions most often manifests itself. This issue is made more complicated by the lack of standards across different Linux distros, hence our initial focus on Linux rather an any other OS.</p>
+    <div id="faq-panel-10" class="accordion-panel" role="region" aria-labelledby="faq-btn-10">
+      <div class="accordion-content">
+        <p>Linux is prevalent in VFX, particularly in the larger studios where they build sophisticated automation pipelines that integrate multiple different software vendors’ products together. These Linux-based pipelines are where the problem of conflicting versions most often manifests itself. This issue is made more complicated by the lack of standards across different Linux distros, hence our initial focus on Linux rather an any other OS.</p>
 
 <p>In 2020 we introduced support for macOS and Windows to encourage people to adopt and integrate more VFX and animation software regardless of their choice of operating system.</p>
 
+      </div>
     </div>
   </div>
   
   <div class="accordion-item">
     <button
+      id="faq-btn-11"
       class="accordion-header rounded-t-lg rounded-b-lg"
       aria-expanded="false"
       aria-controls="faq-panel-11"
-      onclick="this.parentElement.classList.toggle('open'); this.nextElementSibling.classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     >
       <span class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         What about standardising compiler flags to ensure that everyone is building from source in a common and compatible manner?
       </span>
-      <svg class="w-5 h-5 transform transition-transform accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
-    <div id="faq-panel-11" class="accordion-content hidden">
-      <p>We partner with the <a href="https://www.aswf.io/">Academy Software Foundation</a> on many initiatives, and the <a href="https://github.com/AcademySoftwareFoundation/aswf-docker">ASWF Docker project</a> is an excellent resource providing easy-to-use Docker images of all the VFX Reference Platform components. These are created through an automated build system, and you can consider the build process, and choice of compiler flags, as the canonical reference for build recipes.</p>
+    <div id="faq-panel-11" class="accordion-panel" role="region" aria-labelledby="faq-btn-11">
+      <div class="accordion-content">
+        <p>We partner with the <a href="https://www.aswf.io/">Academy Software Foundation</a> on many initiatives, and the <a href="https://github.com/AcademySoftwareFoundation/aswf-docker">ASWF Docker project</a> is an excellent resource providing easy-to-use Docker images of all the VFX Reference Platform components. These are created through an automated build system, and you can consider the build process, and choice of compiler flags, as the canonical reference for build recipes.</p>
 
+      </div>
     </div>
   </div>
   
   <div class="accordion-item">
     <button
+      id="faq-btn-12"
       class="accordion-header rounded-t-lg rounded-b-lg"
       aria-expanded="false"
       aria-controls="faq-panel-12"
-      onclick="this.parentElement.classList.toggle('open'); this.nextElementSibling.classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     >
       <span class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         When does a new version of an open source library need to be released in order for it to be considered for use by next year's batch of 3rd-party software packages?
       </span>
-      <svg class="w-5 h-5 transform transition-transform accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
-    <div id="faq-panel-12" class="accordion-content hidden">
-      <p>Ideally two months prior to SIGGRAPH is the time to have your library released so there is time for it to be considered for inclusion in the Reference Platform for the following year. That said, we will consider new library releases right up until the SIGGRAPH deadline, but cutting it too close may mean there is not enough time for the software vendors to fully evaluate the new version before we lock down and publish the final Reference Platform versions for the following year.</p>
+    <div id="faq-panel-12" class="accordion-panel" role="region" aria-labelledby="faq-btn-12">
+      <div class="accordion-content">
+        <p>Ideally two months prior to SIGGRAPH is the time to have your library released so there is time for it to be considered for inclusion in the Reference Platform for the following year. That said, we will consider new library releases right up until the SIGGRAPH deadline, but cutting it too close may mean there is not enough time for the software vendors to fully evaluate the new version before we lock down and publish the final Reference Platform versions for the following year.</p>
 
+      </div>
     </div>
   </div>
   
   <div class="accordion-item">
     <button
+      id="faq-btn-13"
       class="accordion-header rounded-t-lg "
       aria-expanded="false"
       aria-controls="faq-panel-13"
-      onclick="this.parentElement.classList.toggle('open'); this.nextElementSibling.classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     >
       <span class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         How can I get involved?
       </span>
-      <svg class="w-5 h-5 transform transition-transform accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
-    <div id="faq-panel-13" class="accordion-content hidden">
-      <p>Please send comments, questions, suggestions to: <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a></p>
+    <div id="faq-panel-13" class="accordion-panel" role="region" aria-labelledby="faq-btn-13">
+      <div class="accordion-content">
+        <p>Please send comments, questions, suggestions to: <a href="mailto:feedback@vfxplatform.com">feedback@vfxplatform.com</a></p>
 
+      </div>
     </div>
   </div>
   
 </div>
 
 </section>
+
+<script src="/vfxplatform-staging/assets/js/faq-accordion.js"></script>
 
   </main>
 
@@ -654,7 +707,7 @@
       <!-- About column -->
       <div>
         <a href="/vfxplatform-staging/" class="flex items-center gap-2 text-white font-semibold text-lg mb-3">
-          <img src="/vfxplatform-staging/assets/images/logo_optimized.svg" alt="VFX Reference Platform" class="h-9 w-auto flex-shrink-0">
+          <img src="/vfxplatform-staging/assets/images/logo_optimized.svg" alt="VFX Reference Platform" class="h-9 w-auto flex-shrink-0" loading="lazy">
           <span>VFX Reference Platform</span>
         </a>
         <p class="text-sm text-gray-400 leading-relaxed mb-2">
@@ -673,7 +726,7 @@
           <li>
             <a href="https://groups.google.com/g/vfx-platform-discuss" class="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
               Discussion Group
-              <svg class="w-2.5 h-2.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-2.5 h-2.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
               </svg>
             </a>
@@ -682,7 +735,7 @@
           <li>
             <a href="https://www.aswf.io/" class="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
               Academy Software Foundation
-              <svg class="w-2.5 h-2.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-2.5 h-2.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
               </svg>
             </a>
@@ -691,7 +744,7 @@
           <li>
             <a href="https://vfxpy.com/" class="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
               VFXpy Tracker
-              <svg class="w-2.5 h-2.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-2.5 h-2.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
               </svg>
             </a>
@@ -705,7 +758,7 @@
         <h3 class="text-white font-semibold mb-3">Contact</h3>
         <p class="text-sm text-gray-400 mb-2">
           <a href="mailto:feedback@vfxplatform.com" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
-            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
             feedback@vfxplatform.com
@@ -713,7 +766,7 @@
         </p>
         <p class="text-sm text-gray-400 mb-2">
           <a href="https://groups.google.com/g/vfx-platform-discuss" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
-            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
             vfx-platform-discuss
@@ -721,7 +774,7 @@
         </p>
         <p class="text-sm text-gray-400 mb-2">
           <a href="https://academysoftwarefdn.slack.com/archives/C017TA11X2S" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
-            <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zm10.124 2.521a2.528 2.528 0 0 1 2.52-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.52V8.834zm-1.271 0a2.528 2.528 0 0 1-2.521 2.521 2.528 2.528 0 0 1-2.521-2.521V2.522A2.528 2.528 0 0 1 15.165 0a2.528 2.528 0 0 1 2.522 2.522v6.312zm-2.522 10.124a2.528 2.528 0 0 1 2.522 2.52A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.521-2.522v-2.52h2.521zm0-1.271a2.527 2.527 0 0 1-2.521-2.521 2.528 2.528 0 0 1 2.521-2.522h6.313A2.528 2.528 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.522h-6.313z"/>
             </svg>
             #vfx_reference_platform
@@ -732,7 +785,7 @@
 
     <!-- Legal disclaimer -->
     <div class="border-t border-gray-800 pt-6">
-      <p class="text-xs text-gray-500 leading-relaxed">
+      <p class="text-xs text-gray-400 leading-relaxed">
         <em>Any reference made in the VFX Reference Platform to any company or any other entity, or to their services or products, is not an endorsement or recommendation nor should it imply any such endorsement or recommendation of the quality or fitness of purpose of that company or entity, or its services or products. In no event shall the Visual Effects Society be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services identified in the VFX Reference Platform or the <a href="https://vesglobal.org" class="text-blue-400 hover:text-blue-300 hover:underline">Visual Effects Society website</a>.</em>
       </p>
     </div>

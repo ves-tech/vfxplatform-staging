@@ -38,7 +38,10 @@
   "name": "VFX Reference Platform",
   "url": "https://vfxplatform.com",
   "description": "Reference Platform for VFX Software",
-  "sameAs": []
+  "sameAs": [
+    "https://groups.google.com/g/vfx-platform-discuss",
+    "https://academysoftwarefdn.slack.com/archives/C017TA11X2S"
+  ]
 }
 </script>
 
@@ -63,6 +66,7 @@
 
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased min-h-screen flex flex-col">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:text-sm focus:font-medium">Skip to content</a>
   <nav class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
   <div class="container mx-auto px-4 max-w-6xl">
     <div class="flex items-center justify-between h-16">
@@ -72,8 +76,8 @@
       </a>
 
       <!-- Mobile menu button -->
-      <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
@@ -113,13 +117,12 @@
         
 
         <button
-  id="dark-mode-toggle"
   type="button"
-  class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 transition-colors"
+  class="dark-mode-toggle p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 transition-colors"
   aria-label="Toggle dark mode"
 >
-  <svg id="dark-mode-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path id="moon-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+  <svg class="dark-mode-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path class="moon-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
   </svg>
 </button>
 
@@ -127,7 +130,7 @@
     </div>
 
     <!-- Mobile navigation -->
-    <div id="mobile-menu" class="hidden md:hidden pb-4">
+    <div id="mobile-menu" class="md:hidden pb-4 overflow-hidden transition-all duration-200 ease-out" style="max-height: 0; opacity: 0;">
       
       <a href="/vfxplatform-staging/" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">
         Home
@@ -155,13 +158,12 @@
       
       <div class="px-3 py-2">
         <button
-  id="dark-mode-toggle"
   type="button"
-  class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 transition-colors"
+  class="dark-mode-toggle p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 transition-colors"
   aria-label="Toggle dark mode"
 >
-  <svg id="dark-mode-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path id="moon-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+  <svg class="dark-mode-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path class="moon-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
   </svg>
 </button>
 
@@ -171,15 +173,38 @@
 </nav>
 
 <script>
-  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-    const expanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', !expanded);
-  });
+  (function() {
+    var btn = document.getElementById('mobile-menu-btn');
+    var menu = document.getElementById('mobile-menu');
+    var isOpen = false;
+
+    function openMenu() {
+      isOpen = true;
+      btn.setAttribute('aria-expanded', 'true');
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      menu.style.opacity = '1';
+    }
+
+    function closeMenu() {
+      if (!isOpen) return;
+      isOpen = false;
+      btn.setAttribute('aria-expanded', 'false');
+      menu.style.maxHeight = '0';
+      menu.style.opacity = '0';
+    }
+
+    btn.addEventListener('click', function() {
+      isOpen ? closeMenu() : openMenu();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+  })();
 </script>
 
 
-  <main class="flex-1 container mx-auto px-4 py-8 max-w-6xl">
+  <main id="main-content" class="flex-1 container mx-auto px-4 py-8 max-w-6xl">
     <div class="text-center py-16">
   <h1 class="text-6xl font-bold text-gray-300 dark:text-gray-600 mb-4">404</h1>
   <h2 class="text-2xl font-semibold mb-4">Page Not Found</h2>
@@ -199,7 +224,7 @@
       <!-- About column -->
       <div>
         <a href="/vfxplatform-staging/" class="flex items-center gap-2 text-white font-semibold text-lg mb-3">
-          <img src="/vfxplatform-staging/assets/images/logo_optimized.svg" alt="VFX Reference Platform" class="h-9 w-auto flex-shrink-0">
+          <img src="/vfxplatform-staging/assets/images/logo_optimized.svg" alt="VFX Reference Platform" class="h-9 w-auto flex-shrink-0" loading="lazy">
           <span>VFX Reference Platform</span>
         </a>
         <p class="text-sm text-gray-400 leading-relaxed mb-2">
@@ -218,7 +243,7 @@
           <li>
             <a href="https://groups.google.com/g/vfx-platform-discuss" class="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
               Discussion Group
-              <svg class="w-2.5 h-2.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-2.5 h-2.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
               </svg>
             </a>
@@ -227,7 +252,7 @@
           <li>
             <a href="https://www.aswf.io/" class="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
               Academy Software Foundation
-              <svg class="w-2.5 h-2.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-2.5 h-2.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
               </svg>
             </a>
@@ -236,7 +261,7 @@
           <li>
             <a href="https://vfxpy.com/" class="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
               VFXpy Tracker
-              <svg class="w-2.5 h-2.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-2.5 h-2.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
               </svg>
             </a>
@@ -250,7 +275,7 @@
         <h3 class="text-white font-semibold mb-3">Contact</h3>
         <p class="text-sm text-gray-400 mb-2">
           <a href="mailto:feedback@vfxplatform.com" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
-            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
             feedback@vfxplatform.com
@@ -258,7 +283,7 @@
         </p>
         <p class="text-sm text-gray-400 mb-2">
           <a href="https://groups.google.com/g/vfx-platform-discuss" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
-            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
             vfx-platform-discuss
@@ -266,7 +291,7 @@
         </p>
         <p class="text-sm text-gray-400 mb-2">
           <a href="https://academysoftwarefdn.slack.com/archives/C017TA11X2S" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
-            <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zm10.124 2.521a2.528 2.528 0 0 1 2.52-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.52V8.834zm-1.271 0a2.528 2.528 0 0 1-2.521 2.521 2.528 2.528 0 0 1-2.521-2.521V2.522A2.528 2.528 0 0 1 15.165 0a2.528 2.528 0 0 1 2.522 2.522v6.312zm-2.522 10.124a2.528 2.528 0 0 1 2.522 2.52A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.521-2.522v-2.52h2.521zm0-1.271a2.527 2.527 0 0 1-2.521-2.521 2.528 2.528 0 0 1 2.521-2.522h6.313A2.528 2.528 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.522h-6.313z"/>
             </svg>
             #vfx_reference_platform
@@ -277,7 +302,7 @@
 
     <!-- Legal disclaimer -->
     <div class="border-t border-gray-800 pt-6">
-      <p class="text-xs text-gray-500 leading-relaxed">
+      <p class="text-xs text-gray-400 leading-relaxed">
         <em>Any reference made in the VFX Reference Platform to any company or any other entity, or to their services or products, is not an endorsement or recommendation nor should it imply any such endorsement or recommendation of the quality or fitness of purpose of that company or entity, or its services or products. In no event shall the Visual Effects Society be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services identified in the VFX Reference Platform or the <a href="https://vesglobal.org" class="text-blue-400 hover:text-blue-300 hover:underline">Visual Effects Society website</a>.</em>
       </p>
     </div>
