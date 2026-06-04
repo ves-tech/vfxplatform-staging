@@ -1178,8 +1178,10 @@
 
                 <td class="text-sm version-changed">
                   
-                    <span class="font-mono">Visual Studio 2022 v17.14 or later</span>
+                    <span class="font-mono">Visual Studio build tools v14.44 or later</span>
                     
+                    
+                      <br><small><a href="#footnote-msvc-buildtool-versions" data-note-id="footnote-msvc-buildtool-versions" class="text-blue-600 dark:text-blue-400 hover:underline" aria-label="Notes for Minimum Platform Toolset">(see notes)</a></small>
                     
                   
                 </td>
@@ -5939,8 +5941,10 @@
                     
                   </td>
                   <td class="font-mono text-right">
-                    Visual Studio 2022 v17.14 or later
+                    Visual Studio build tools v14.44 or later
                     
+                    
+                      <br><small><a href="#footnote-msvc-buildtool-versions" data-note-id="footnote-msvc-buildtool-versions" class="text-blue-600 dark:text-blue-400 hover:underline font-sans">(see notes)</a></small>
                     
                   </td>
                 </tr>
@@ -12345,6 +12349,18 @@ sudo yum -y install devtoolset-6
       <p>There is <a href="https://github.com/oneapi-src/oneTBB/issues/274">a known issue compiling TBB 2020 with MSVC 2017</a> that can be resolved with <a href="https://github.com/oneapi-src/oneTBB/pull/299">this workaround</a>.</p>
 
 <p>Please plan to <a href="https://www.intel.com/content/www/us/en/docs/onetbb/developer-guide-api-reference/2021-9/migrating-from-threading-building-blocks-tbb.htm">migrate to oneTBB</a> and have compatible releases published by September 1st 2024 to enable DCC providers to complete a planned move in CY2025. The original plan was to move to the oneAPI in CY2024 but more time was needed to migrate critical dependencies without impacting performance or introducing multiple conflicting thread pools.</p>
+
+    </div>
+  </template>
+
+  <template id="note-content-footnote-msvc-buildtool-versions">
+    <h4 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Note - MSVC build tool versons</h4>
+    <div class="prose dark:prose-invert max-w-none text-sm">
+      <p>There are many different version numbers that Microsoft use in the VisualStudio ecosystem. Build tool versions can be found <a href="https://learn.microsoft.com/en-us/cpp/overview/compiler-versions?view=msvc-180#version-macros">here</a>.</p>
+
+<p>14.44 is the latest VS2022 build tools, supported until January 2032. VS2026 build tools start from 14.50. VisualStudio products can generally install current and older build tool versions side-by-side.</p>
+
+<p>We will lean on Microsoft’s <a href="https://learn.microsoft.com/en-us/cpp/porting/binary-compat-2015-2017?view=msvc-180">binary compatibility guarantee</a>.</p>
 
     </div>
   </template>
