@@ -683,9 +683,9 @@
                 
                 
 
-                <td class="text-sm version-changed">
+                <td class="text-sm">
                   
-                    <span class="font-mono">15.0</span>
+                    <span class="font-mono">14.0</span>
                     
                     
                       <br><small><a href="#footnote-macos" data-note-id="footnote-macos" class="text-blue-600 dark:text-blue-400 hover:underline" aria-label="Notes for Minimum Deployment Target">(see notes)</a></small>
@@ -2777,6 +2777,10 @@
 <p><strong>UPDATE: April 4th 2021 - Building Qt for macOS</strong></p>
 
 <p>Building Qt against C++17 requires a minimum macOS version of 10.14 otherwise Qt fails during configuration. If 10.13 support is needed then a known workaround is to build Qt against C++14.</p>
+
+<p><strong>UPDATE: August 2026 - Qt 6.8 on macOS</strong></p>
+
+<p>Qt 6.8 source code sets a limit for the minimum macOS version to 14, since it uses APIs that were removed in 15. Until a future Qt version unblocks this, the minimum macOS version has been held.</p>
 
     </div>
   </template>
