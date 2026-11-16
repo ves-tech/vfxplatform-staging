@@ -3,10 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="VFX Reference Platform - Frequently Asked Questions">
-<meta name="author" content="VFX Reference Platform Working Group">
 
-<title>Frequently Asked Questions | VFX Reference Platform</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +34,7 @@
   "@type": "Organization",
   "name": "VFX Reference Platform",
   "url": "https://vfxplatform.com",
+  "logo": "https://vfxplatform.com/vfxplatform-staging/assets/images/favicon.ico/web-app-manifest-512x512.png",
   "description": "Reference Platform for VFX Software",
   "sameAs": [
     "https://groups.google.com/g/vfx-platform-discuss",
@@ -56,11 +54,13 @@
 <link rel="canonical" href="https://vfxplatform.com/vfxplatform-staging/FAQ/" />
 <meta property="og:url" content="https://vfxplatform.com/vfxplatform-staging/FAQ/" />
 <meta property="og:site_name" content="VFX Reference Platform" />
+<meta property="og:image" content="https://vfxplatform.com/vfxplatform-staging/assets/images/favicon.ico/web-app-manifest-512x512.png" />
 <meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://vfxplatform.com/vfxplatform-staging/assets/images/favicon.ico/web-app-manifest-512x512.png" />
 <meta name="twitter:title" content="Frequently Asked Questions" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"VFX Reference Platform Working Group"},"description":"VFX Reference Platform - Frequently Asked Questions","headline":"Frequently Asked Questions","url":"https://vfxplatform.com/vfxplatform-staging/FAQ/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Organization","name":"VFX Reference Platform Working Group"},"description":"VFX Reference Platform - Frequently Asked Questions","headline":"Frequently Asked Questions","image":"https://vfxplatform.com/vfxplatform-staging/assets/images/favicon.ico/web-app-manifest-512x512.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://vfxplatform.com/vfxplatform-staging/assets/images/favicon.ico/web-app-manifest-512x512.png"},"name":"VFX Reference Platform Working Group"},"url":"https://vfxplatform.com/vfxplatform-staging/FAQ/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -216,7 +216,7 @@
       "name": "As a VFX artist, what does the VFX Reference Platform mean to me?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Building software products for a common platform means they are easier to install and integrate into pipelines so may result in quicker adoption of new software releases at your studio. It has also made it easier for the industry to adopt new technologies more rapidly.We also hope that by making it simpler for vendors to support Linux we will see more applications available on Linux in the future."
+        "text": "Building software products for a common platform means they are easier to install and integrate into pipelines so may result in quicker adoption of new software releases at your studio. It has also made it easier for the industry to adopt new technologies more rapidly. We also hope that by making it simpler for vendors to support Linux we will see more applications available on Linux in the future."
       }
     },
     
@@ -225,7 +225,7 @@
       "name": "Does the inclusion of a particular tool or library represent its endorsement by the VES?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, neither the VES nor the VFX Reference Platform working group endorse or promote any specific software packages for use in the creation of visual effects. The decision to include a particular library or tool in the Platform is based primarily on whether using differing versions introduces compatibility issues.There are plenty of excellent libraries and tools in common use throughout the VFX industry that are not included in the Platform because they do not present version compatibility issues."
+        "text": "No, neither the VES nor the VFX Reference Platform working group endorse or promote any specific software packages for use in the creation of visual effects. The decision to include a particular library or tool in the Platform is based primarily on whether using differing versions introduces compatibility issues. There are plenty of excellent libraries and tools in common use throughout the VFX industry that are not included in the Platform because they do not present version compatibility issues."
       }
     },
     
@@ -234,7 +234,7 @@
       "name": "What Linux distribution do you recommend?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "As of 2022, studios are strongly recommended to adopt Red Hat Enterprise Linux or one of its freely available compatible downstream distributions such as AlmaLinux or Rocky Linux. For more details on this recommendation, please refer to the [VFX Linux Distribution Recommendation Report (pdf)](https://bit.ly/VFXlinux22).For more general information about the use of Linux in VFX and Animation studios, please see the [Linux page](/linux/) on this site."
+        "text": "As of 2022, studios are strongly recommended to adopt Red Hat Enterprise Linux or one of its freely available compatible downstream distributions such as AlmaLinux or Rocky Linux. For more details on this recommendation, please refer to the VFX Linux Distribution Recommendation Report (pdf). For more general information about the use of Linux in VFX and Animation studios, please see the Linux page on this site."
       }
     },
     
@@ -261,7 +261,7 @@
       "name": "What is the significance of the glibc version to which Linux distro releases are not supported?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The glibc specified in the VFX Reference Platform is the minimum version of the GNU C library that the platform will work with. Generally speaking, glibc is not upgradeable on a given Linux distro release so if your distro has a glibc version earlier than that specified in the VFX Reference Platform then it will not be supported.For example, for CY2015 the minimum glibc was set to 2.12 which meant that releases earlier than CentOS 6.0 or Ubuntu 12.04, just to take those distributions as an example, were not supported by CY2015 because they shipped with an older version of glibc."
+        "text": "The glibc specified in the VFX Reference Platform is the minimum version of the GNU C library that the platform will work with. Generally speaking, glibc is not upgradeable on a given Linux distro release so if your distro has a glibc version earlier than that specified in the VFX Reference Platform then it will not be supported. For example, for CY2015 the minimum glibc was set to 2.12 which meant that releases earlier than CentOS 6.0 or Ubuntu 12.04, just to take those distributions as an example, were not supported by CY2015 because they shipped with an older version of glibc."
       }
     },
     
@@ -270,7 +270,7 @@
       "name": "Which software vendors are currently involved?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The VFX Reference Platform is a collaborative project. So far, we have the enthusiastic support of all of the major application providers for the visual effects and animation industry, including Autodesk, Foundry and Side Effects Software.There are two ways to participate: First, any interested person or company may join the discussion at [vfx-platform-discuss@googlegroups.com](mailto:vfx-platform-discuss@googlegroups.com). Second, we have formed a Working Group who hold regular conference calls to ensure progress is made in complicated areas. The Working Group is made up of interested parties invited by the VES Technology Committee and currently has several members, one representative from the VES and one each from several software vendors."
+        "text": "The VFX Reference Platform is a collaborative project. So far, we have the enthusiastic support of all of the major application providers for the visual effects and animation industry, including Autodesk, Foundry and Side Effects Software. There are two ways to participate: First, any interested person or company may join the discussion at vfx-platform-discuss@googlegroups.com. Second, we have formed a Working Group who hold regular conference calls to ensure progress is made in complicated areas. The Working Group is made up of interested parties invited by the VES Technology Committee and currently has several members, one representative from the VES and one each from several software vendors."
       }
     },
     
@@ -288,7 +288,7 @@
       "name": "My application provider doesn't currently support the VFX Reference Platform, what should I do?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "First, please help ensure your application provider is aware of the VFX Reference Platform and the goal of making it easier to develop for Linux. Asking them to support the VFX Reference Platform as a priority for their development is a great idea for everyone.Second, users should be aware that some developers will have technical challenges changing software to conform to the version requirements in the VFX Reference Platform. Even companies who enthusiastically support the effort may take a few releases to be compliant with the platform."
+        "text": "First, please help ensure your application provider is aware of the VFX Reference Platform and the goal of making it easier to develop for Linux. Asking them to support the VFX Reference Platform as a priority for their development is a great idea for everyone. Second, users should be aware that some developers will have technical challenges changing software to conform to the version requirements in the VFX Reference Platform. Even companies who enthusiastically support the effort may take a few releases to be compliant with the platform."
       }
     },
     
@@ -297,7 +297,7 @@
       "name": "Why the initial focus on Linux, what about other operating systems?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Linux is prevalent in VFX, particularly in the larger studios where they build sophisticated automation pipelines that integrate multiple different software vendors' products together. These Linux-based pipelines are where the problem of conflicting versions most often manifests itself. This issue is made more complicated by the lack of standards across different Linux distros, hence our initial focus on Linux rather an any other OS.In 2020 we introduced support for macOS and Windows to encourage people to adopt and integrate more VFX and animation software regardless of their choice of operating system."
+        "text": "Linux is prevalent in VFX, particularly in the larger studios where they build sophisticated automation pipelines that integrate multiple different software vendors’ products together. These Linux-based pipelines are where the problem of conflicting versions most often manifests itself. This issue is made more complicated by the lack of standards across different Linux distros, hence our initial focus on Linux rather an any other OS. In 2020 we introduced support for macOS and Windows to encourage people to adopt and integrate more VFX and animation software regardless of their choice of operating system."
       }
     },
     
@@ -306,7 +306,7 @@
       "name": "What about standardising compiler flags to ensure that everyone is building from source in a common and compatible manner?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We partner with the [Academy Software Foundation](https://www.aswf.io/) on many initiatives, and the [ASWF Docker project](https://github.com/AcademySoftwareFoundation/aswf-docker) is an excellent resource providing easy-to-use Docker images of all the VFX Reference Platform components. These are created through an automated build system, and you can consider the build process, and choice of compiler flags, as the canonical reference for build recipes."
+        "text": "We partner with the Academy Software Foundation on many initiatives, and the ASWF Docker project is an excellent resource providing easy-to-use Docker images of all the VFX Reference Platform components. These are created through an automated build system, and you can consider the build process, and choice of compiler flags, as the canonical reference for build recipes."
       }
     },
     
@@ -324,7 +324,7 @@
       "name": "How can I get involved?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Please send comments, questions, suggestions to: [feedback@vfxplatform.com](mailto:feedback@vfxplatform.com)"
+        "text": "Please send comments, questions, suggestions to: feedback@vfxplatform.com"
       }
     }
     
